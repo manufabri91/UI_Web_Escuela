@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SaludarService } from '../services/saludar.service';
+import { SaludarService } from 'src/app/core/services/saludar.service';
 
 @Component({
   selector: 'app-saludar',

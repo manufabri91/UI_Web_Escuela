@@ -1,18 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { SaludarComponent } from './saludar/saludar.component';
-import { SaludarService } from './services/saludar.service';
+
+import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { RouterModule } from '@angular/router';
+
 
 @NgModule({
-  declarations: [SaludarComponent],
+  declarations: [HomeComponent, NavbarComponent],
   imports: [
     CommonModule,
-    FormsModule
+    RouterModule
   ],
-  exports: [SaludarComponent],
-  providers: [
-    SaludarService,
-  ]
+  exports: [NavbarComponent]
 })
 export class CoreModule { }

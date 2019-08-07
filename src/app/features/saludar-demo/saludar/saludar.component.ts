@@ -8,7 +8,7 @@ import { SaludarService } from 'src/app/core/services/saludar.service';
 })
 export class SaludarComponent implements OnInit {
 
-  public saludo: string;
+  public saludo: any; // solo a fines de demostracion, no usar any en clases productivas
   public texto: string;
 
   constructor(private _saludarService: SaludarService) { }

@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/UI-Sitio-U",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

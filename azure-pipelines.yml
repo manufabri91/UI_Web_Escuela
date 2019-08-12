@@ -10,26 +10,28 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
 
-- script: |
-    workingDir: UI_Sitio_U
-    npm install -g @angular/cli@8.2.0
-    npm install
-    ng build --prod
-  displayName: 'npm install and build'
+- task: Npm@1
+  displayName: 'npm install'
+  inputs:
+    command: install
+    workingDir: src/UI_Sitio_U
+
+- task: Npm@1
+  displayName: 'Build Angular'
+  inputs:
+    command: custom
+    customCommand: run build -- --prod
+    workingDir: src/UI_Sitio_U
 
 - task: PublishPipelineArtifact@0
   inputs:
     artifactName: 'angular'
-    targetPath: 'UI_Sitio_U/dist'
+    targetPath: 'src/UI_Sitio_U/dist'
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: 'UI_Sitio_U/dist'
+    PathtoPublish: 'src/UI_Sitio_U/dist'
     ArtifactName: angular2
 
 - task: Npm@1
@@ -38,3 +40,44 @@ steps:
     command: custom
     customCommand: run test -- --watch=false --code-coverage
     workingDir: src/UI_Sitio_U
+
+- task: PublishCodeCoverageResults@1
+  displayName: 'Publish code coverage Angular results'
+  condition: succeededOrFailed()
+  inputs:
+    codeCoverageTool: Cobertura
+    summaryFileLocation: 'src/UI_Sitio_U/coverage/cobertura-coverage.xml'
+    reportDirectory: src/UI_Sitio_U/coverage
+    failIfCoverageEmpty: true
+
+- task: PublishTestResults@2
+  displayName: 'Publish Angular test results'
+  condition: succeededOrFailed()
+  inputs:
+    searchFolder: $(System.DefaultWorkingDirectory)/src/UI_Sitio_U/junit
+    testRunTitle: Angular
+    testResultsFormat: JUnit
+    testResultsFiles: "**/TESTS*.xml"
+
+- task: Npm@1
+  displayName: 'Lint Angular'
+  inputs:
+    command: custom
+    customCommand: run lint --  --format=stylish
+    workingDir: src/UI_Sitio_U
+
+- task: Npm@1
+  displayName: 'E2E Test Angular'
+  inputs:
+    command: custom
+    customCommand: run e2e
+    workingDir: src/UI_Sitio_U
+
+- task: PublishTestResults@2
+  displayName: 'Publish Angular E2E test results'
+  condition: succeededOrFailed()
+  inputs:
+    searchFolder: $(System.DefaultWorkingDirectory)/src/UI_Sitio_U/e2e/junit
+    testRunTitle: Angular_E2E
+    testResultsFormat: JUnit
+    testResultsFiles: "**/junit*.xml"

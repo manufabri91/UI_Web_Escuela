@@ -20,8 +20,8 @@ steps:
     npm install
     ng build --prod
   displayName: 'instalar angular, paquetes y build prod'
-
-- task: PublishPipelineArtifact@0
+  
+- task: PublishPipelineArtifact@1
   inputs:
-    artifactName: 'UI_sitio_U'
-    targetPath: '/dist'
+    targetPath: '$(Pipeline.Workspace)/dist'
+    artifact: 'UI_sitio_U'

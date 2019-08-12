@@ -20,3 +20,6 @@ steps:
     npm install
     ng build --prod
   displayName: 'npm install and build'
+
+- publish: $(System.DefaultWorkingDirectory)/
+  artifact: drop

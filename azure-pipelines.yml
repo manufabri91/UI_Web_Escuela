@@ -24,4 +24,4 @@ steps:
 - task: PublishPipelineArtifact@0
   inputs:
     artifactName: 'UI_sitio_U'
-    targetPath: 'UI_sitio_U/dist'
+    targetPath: '/dist'

@@ -16,7 +16,8 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    npm install -g @angular/cli
+    workingDir: UI_Sitio_U
+    npm install -g @angular/cli@8.2.0
     npm install
     ng build --prod
   displayName: 'npm install and build'
@@ -24,11 +25,11 @@ steps:
 - task: PublishPipelineArtifact@0
   inputs:
     artifactName: 'angular'
-    targetPath: 'src/UI_Sitio_U/dist'
+    targetPath: 'UI_Sitio_U/dist'
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: 'src/UI_Sitio_U/dist'
+    PathtoPublish: 'UI_Sitio_U/dist'
     ArtifactName: angular2
 
 - task: Npm@1

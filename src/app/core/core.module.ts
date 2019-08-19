@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
+import { AlumnoService } from './services/alumno.service';
+import { LoginService } from './services/login.service';
 
 
 
@@ -13,6 +15,7 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     RouterModule
   ],
-  exports: [NavbarComponent]
+  exports: [NavbarComponent],
+  providers: [AlumnoService, LoginService]
 })
 export class CoreModule { }

@@ -12,8 +12,8 @@ const routes: Routes = [
   //   loadChildren: './features/authors/authors.module#AuthorsModule'
   // },
   {
-    path: 'saludar',
-    loadChildren: './features/saludar-demo/saludar-demo.module#SaludarDemoModule'
+    path: 'login',
+    loadChildren: './features/login/login.module#LoginModule'
   },
   {
     path: '',

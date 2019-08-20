@@ -6,16 +6,17 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { AlumnoService } from './services/alumno.service';
 import { LoginService } from './services/login.service';
+import { FooterComponent } from './footer/footer.component';
 
 
 
 @NgModule({
-  declarations: [HomeComponent, NavbarComponent],
+  declarations: [HomeComponent, NavbarComponent, FooterComponent],
   imports: [
     CommonModule,
     RouterModule
   ],
-  exports: [NavbarComponent],
+  exports: [NavbarComponent, FooterComponent],
   providers: [AlumnoService, LoginService]
 })
 export class CoreModule { }

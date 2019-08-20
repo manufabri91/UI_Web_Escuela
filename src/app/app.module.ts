@@ -4,7 +4,9 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ErrorInterceptor } from './core/interceptors/error.interceptor';
+import { JwtModule } from '@auth0/angular-jwt';
 
 @NgModule({
   declarations: [
@@ -15,10 +17,20 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     CoreModule,
     HttpClientModule,
-    AppRoutingModule
-    
+    AppRoutingModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter:  () => {
+          return localStorage.getItem('token');
+        },
+        whitelistedDomains: ['apisitiou.herokuapp.com'],
+        blacklistedRoutes: []
+      }
+    })
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

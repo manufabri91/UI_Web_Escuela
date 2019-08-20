@@ -7,6 +7,8 @@ import { CoreModule } from './core/core.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ErrorInterceptor } from './core/interceptors/error.interceptor';
 import { JwtModule } from '@auth0/angular-jwt';
+import { CareerDetailComponent } from './features/career-detail/career-detail.component';
+import { FeaturesModule } from './features/features.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { JwtModule } from '@auth0/angular-jwt';
     CoreModule,
     HttpClientModule,
     AppRoutingModule,
+    FeaturesModule,
     JwtModule.forRoot({
       config: {
         tokenGetter:  () => {

@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { AlumnoService } from './services/alumno.service';
 import { LoginService } from './services/login.service';
 import { FooterComponent } from './footer/footer.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -14,7 +15,8 @@ import { FooterComponent } from './footer/footer.component';
   declarations: [HomeComponent, NavbarComponent, FooterComponent],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    NgbModule
   ],
   exports: [NavbarComponent, FooterComponent],
   providers: [AlumnoService, LoginService]

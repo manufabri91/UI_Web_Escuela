@@ -1,0 +1,64 @@
+<br>
+<div class="container">
+    <h1>Ingresar alumno</h1>
+    <form (ngSubmit)="onSubmit()"  #alumnoForm="ngForm">
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" class="form-control" id="nombre"
+            required
+            [(ngModel)]="alumno.nombre" name="nombre" #nombre="ngModel">
+            <div [hidden]="nombre.valid || nombre.pristine"
+            class="alert alert-danger">
+                  Nombre es requerido
+             </div>
+      </div>
+
+      <div class="form-group">
+        <label for="apellido">Apellido</label>
+        <input type="text" class="form-control" id="apellido"
+            required
+            [(ngModel)]="alumno.apellido" name="apellido" #apellido="ngModel">
+            <div [hidden]="apellido.valid || apellido.pristine"
+            class="alert alert-danger">
+                Apellido es requerido
+             </div>
+      </div>
+
+      <div class="form-group">
+        <label for="nacimiento">Nacimiento</label>
+        <input type="text" class="form-control" id="nacimiento"
+            required
+            [(ngModel)]="alumno.nacimiento" name="nacimiento" #nacimiento="ngModel">
+            <div [hidden]="nacimiento.valid || nacimiento.pristine"
+            class="alert alert-danger">
+                Nacimiento es requerido
+             </div>
+      </div>
+
+      <div class="form-group">
+        <label for="dni">Dni</label>
+        <input type="text" class="form-control" id="dni"
+            required
+            [(ngModel)]="alumno.dni" name="dni" #dni="ngModel">
+            <div [hidden]="dni.valid || dni.pristine"
+            class="alert alert-danger">
+            Dni es requerido
+             </div>
+      </div>
+
+      <div class="form-group">
+        <label for="telefono">Teléfono</label>
+        <input type="text" class="form-control" id="telefono"
+            required
+            [(ngModel)]="alumno.telefono" name="telefono" #telefono="ngModel">
+            <div [hidden]="telefono.valid || telefono.pristine"
+            class="alert alert-danger">
+            Teléfono es requerido
+             </div>
+      </div>
+
+      <button type="submit" [disabled]="!alumnoForm.valid" class="btn btn-primary">Submit</button>
+
+    </form>
+</div>
+<br>

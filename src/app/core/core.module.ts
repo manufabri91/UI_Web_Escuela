@@ -6,16 +6,27 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { AlumnoService } from './services/alumno.service';
 import { LoginService } from './services/login.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [HomeComponent, NavbarComponent],
-  imports: [
+  imports: [ // cosas que necesito inyectar en core y son comunes a toda la app
     CommonModule,
     RouterModule,
-    BrowserAnimationsModule
+    NgbModule,
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
-  exports: [NavbarComponent],
-  providers: [AlumnoService, LoginService]
+  exports: [ // componentes o modulos que se van a usar en otro lado
+    NgbModule,
+    NavbarComponent,
+    MatButtonModule
+  ],
+  providers: [ // servicios a proveer
+    AlumnoService,
+    LoginService
+  ]
 })
 export class CoreModule { }

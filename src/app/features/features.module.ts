@@ -4,13 +4,16 @@ import { CareerDetailComponent } from './career-detail/career-detail.component';
 import { AltaAlumnoComponent } from './alta-alumno/alta-alumno.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { ListarAlumnoComponent } from './listar-alumno/listar-alumno.component';
 
 @NgModule({
-  declarations: [CareerDetailComponent, AltaAlumnoComponent],
+  declarations: [CareerDetailComponent, AltaAlumnoComponent, ListarAlumnoComponent],
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   exports: [CareerDetailComponent]
 })

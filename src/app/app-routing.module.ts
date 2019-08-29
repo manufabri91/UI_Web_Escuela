@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './core/home/home.component';
 import { CareerDetailComponent } from './features/career-detail/career-detail.component';
 import { AltaAlumnoComponent } from './features/alta-alumno/alta-alumno.component';
+import { ListarAlumnoComponent } from './features/listar-alumno/listar-alumno.component';
 
 const routes: Routes = [
   // {
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'career',
     component: CareerDetailComponent
+  },
+  {
+    path: 'listar-alumno',
+    component: ListarAlumnoComponent
   },
   {
     path: 'alta-alumno',

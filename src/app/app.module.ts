@@ -10,6 +10,7 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { CareerDetailComponent } from './features/career-detail/career-detail.component';
 import { FeaturesModule } from './features/features.module';
 
+
 @NgModule({
   declarations: [
     AppComponent

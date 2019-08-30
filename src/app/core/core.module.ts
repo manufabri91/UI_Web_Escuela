@@ -9,7 +9,8 @@ import { LoginService } from './services/login.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
-
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
 @NgModule({
   declarations: [HomeComponent, NavbarComponent],
   imports: [ // cosas que necesito inyectar en core y son comunes a toda la app
@@ -17,12 +18,16 @@ import { MatButtonModule } from '@angular/material/button';
     RouterModule,
     NgbModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatGridListModule,
+    MatCardModule
   ],
   exports: [ // componentes o modulos que se van a usar en otro lado
     NgbModule,
     NavbarComponent,
-    MatButtonModule
+    MatButtonModule,
+    MatGridListModule,
+    MatCardModule
   ],
   providers: [ // servicios a proveer
     AlumnoService,

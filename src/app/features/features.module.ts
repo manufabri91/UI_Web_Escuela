@@ -6,9 +6,11 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ListarAlumnoComponent } from './listar-alumno/listar-alumno.component';
+import { FormAlumnoComponent } from './form-alumno/form-alumno.component';
+import { ModificarAlumnoComponent } from './modificar-alumno/modificar-alumno.component';
 
 @NgModule({
-  declarations: [CareerDetailComponent, AltaAlumnoComponent, ListarAlumnoComponent],
+  declarations: [CareerDetailComponent, AltaAlumnoComponent, ListarAlumnoComponent, FormAlumnoComponent, ModificarAlumnoComponent],
   imports: [
     CommonModule,
     FormsModule,

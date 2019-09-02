@@ -1,4 +1,70 @@
-<p>Aca tenemos que poner lo que está en home (claramente!)</p>
+<main class="container-fluid">
+  <div class="container-carousel">
+    <ngb-carousel *ngIf="images" [showNavigationArrows]="showNavigationArrows"
+      [showNavigationIndicators]="showNavigationIndicators">
+      <ng-template ngbSlide *ngFor="let image of images">
+        <div class="fotos-escuela">
+          <img class="foto" [src]="image.path" alt="Foto escuela">
+        </div>
+        <div class="carousel-caption">
+          <h3>{{image.titulo}}</h3>
+          <p>{{image.desc}}</p>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
 
-<button (click)='testapi()'>TEST API</button>
-<p>{{alumnos | json}}</p>
+  <div class="container-grid">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Desarrollo de Software.</mat-card-title>
+        <mat-card-subtitle>DS</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="/assets/img/ds.png" alt="DS">
+      <mat-card-content>
+        <p>
+          Participará en proyectos de desarrollo desempeñando roles que tienen por
+          objeto producir artefactos de software (programas, módulos, objetos)...
+        </p>
+      </mat-card-content>
+      <mat-card-actions align="end">
+        <button mat-raised-button color="primary">Saber más</button>
+      </mat-card-actions>
+    </mat-card>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Analísta Funcional.</mat-card-title>
+        <mat-card-subtitle>AF</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="/assets/img/af.png" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          Sus funciones serán las de interpretar los negocios de una organización, analizar sus procesos y averiguar las necesidades de información...
+        </p>
+      </mat-card-content>
+      <mat-card-actions align="end">
+        <button mat-raised-button color="primary">Saber más</button>
+      </mat-card-actions>
+    </mat-card>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Infraestructura de la Tecnología.</mat-card-title>
+        <mat-card-subtitle>IT</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="/assets/img/it.png" alt="IT">
+      <mat-card-content>
+        <p> Estará capacitado para implementar, mantener, analizar inconvenientes y resolver problemas derivados de productos de tecnología...
+        </p>
+      </mat-card-content>
+      <mat-card-actions align="end">
+        <button mat-raised-button color="primary">Saber más</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</main>
+
+<!-- <button mat-raised-button color="primary" (click)='testapi()'>TEST API</button>
+<p>{{alumnos | json}}</p> -->

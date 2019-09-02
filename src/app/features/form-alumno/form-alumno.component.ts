@@ -9,47 +9,57 @@ import { FormGroup, FormControl, Validators, FormArray, FormBuilder } from '@ang
   styleUrls: ['./form-alumno.component.scss']
 })
 export class FormAlumnoComponent implements OnInit {
-  
+
   @Input()
-  public alumno : Alumno;
-	@Output()
-  private formSubmitted : EventEmitter<FormGroup> = new EventEmitter<FormGroup>();
-  private alumnoForm: FormGroup; 
+  public alumno: Alumno;
+
+  @Output()
+  private formSubmitted: EventEmitter<FormGroup> = new EventEmitter<FormGroup>();
+  private alumnoForm: FormGroup;
 
 
   constructor(private fb: FormBuilder) {
-		this.alumnoForm = this.fb.group({
-      legajo: new FormControl(this.alumno.legajo,[
+    this.alumnoForm = this.fb.group({
+      legajo: new FormControl('', [
         Validators.required,
         Validators.maxLength(25)
       ]),
-      nombre: new FormControl(this.alumno.nombre,[
+      nombre: new FormControl('', [
         Validators.required,
         Validators.maxLength(25)
       ]),
-      apellido: new FormControl(this.alumno.apellido,[
+      apellido: new FormControl('', [
         Validators.required,
         Validators.maxLength(25)
       ]),
-      nacimiento: new FormControl(this.alumno.nacimiento,[
+      nacimiento: new FormControl('', [
         Validators.required,
         Validators.maxLength(25)
       ]),
-      dni: new FormControl(this.alumno.dni,[
+      dni: new FormControl('', [
         Validators.required,
         Validators.maxLength(25)
       ]),
-      telefono: new FormControl(this.alumno.telefono,[
+      telefono: new FormControl('', [
         Validators.required,
         Validators.maxLength(25)
       ])
-		});
-	}
+    });
+  }
 
   ngOnInit(): void {
-		
-	}
-  
+    const alumnoControls = this.alumnoForm.controls;
+    if (this.alumno) {
+      alumnoControls.legajo.setValue(this.alumno.legajo);
+      alumnoControls.nombre.setValue(this.alumno.nombre);
+      alumnoControls.apellido.setValue(this.alumno.apellido);
+      alumnoControls.nacimiento.setValue(this.alumno.nacimiento);
+      alumnoControls.dni.setValue(this.alumno.dni);
+      alumnoControls.nacimiento.setValue(this.alumno.telefono);
+    } else{
+      alumnoControls.legajo.disable();
+    }
+  }
   get legajo() { return this.alumnoForm.get('legajo'); }
   get nombre() { return this.alumnoForm.get('nombre'); }
   get apellido() { return this.alumnoForm.get('apellido'); }
@@ -57,11 +67,11 @@ export class FormAlumnoComponent implements OnInit {
   get dni() { return this.alumnoForm.get('dni'); }
   get telefono() { return this.alumnoForm.get('telefono'); }
   submitted = false;
-  onSubmit(){
+  onSubmit() {
     if (this.alumnoForm.valid) {
-        this.submitted = true;
-        this.formSubmitted.emit(this.alumnoForm);
-    }else{
+      this.submitted = true;
+      this.formSubmitted.emit(this.alumnoForm);
+    } else {
       this.markAllFormFieldsAsTouched(this.alumnoForm);
     }
   }
@@ -70,7 +80,7 @@ export class FormAlumnoComponent implements OnInit {
     Object.values(formGroup.controls).forEach(
       (control) => {
         if (control instanceof FormControl) {
-          control.markAsTouched({onlySelf: true});
+          control.markAsTouched({ onlySelf: true });
         } else if (control instanceof FormGroup || control instanceof FormArray) {
           this.markAllFormFieldsAsTouched(control);
         }

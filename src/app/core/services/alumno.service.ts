@@ -22,7 +22,7 @@ export class AlumnoService {
     return this.httpClient.post<Alumno>('https://apisitiou.herokuapp.com/alumnos/actualizar', alumno);
   }
 
-  public getAlumno(id: Number): Observable<Alumno> {
+  public getAlumno(id: number): Observable<Alumno> {
     //TODO crear endpoint
     return this.httpClient.post<Alumno>('https://apisitiou.herokuapp.com/alumnos/', id);
   }

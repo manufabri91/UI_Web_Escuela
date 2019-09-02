@@ -4,6 +4,7 @@ import { AlumnoService } from 'src/app/core/services/alumno.service';
 import { Alumno } from 'src/app/core/models/alumno';
 import { FormGroup, FormControl, FormArray } from '@angular/forms';
 import { Validators } from '@angular/forms';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-alta-alumno',
@@ -13,17 +14,17 @@ import { Validators } from '@angular/forms';
 export class AltaAlumnoComponent implements OnInit {
 
 
-  constructor(private alumnoService : AlumnoService) { }
+  constructor(private alumnoService: AlumnoService) { }
 
   ngOnInit() {
 
   }
 
-  public submitForm(formGroup: FormGroup) : void {
-    this.alumnoService.cargarAlumnos(formGroup.value);
-	}
-  onSubmit() { 
-   
+  public submitForm(formGroup: FormGroup): void {
+    const alumno = new Alumno(formGroup.value);
+    this.alumnoService.cargarAlumnos(alumno).subscribe(result => {
+        location.assign('/listar-alumnos');
+      });
   }
- 
+
 }

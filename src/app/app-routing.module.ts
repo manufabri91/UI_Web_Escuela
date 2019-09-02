@@ -12,7 +12,7 @@ const routes: Routes = [
   //   loadChildren: './features/posts/posts.module#PostsModule'
   // },
   {
-    path: 'career',
+    path: 'carrera',
     component: CareerDetailComponent
   },
   {

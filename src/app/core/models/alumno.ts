@@ -5,4 +5,8 @@ export class Alumno {
     nacimiento: Date;
     dni: string;
     telefono: string;
+
+    constructor(rawjson?: any) {
+        Object.assign(this, rawjson);
+    }
 }

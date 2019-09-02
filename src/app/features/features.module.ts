@@ -17,6 +17,6 @@ import { ModificarAlumnoComponent } from './modificar-alumno/modificar-alumno.co
     ReactiveFormsModule,
     RouterModule
   ],
-  exports: [CareerDetailComponent]
+  exports: []
 })
 export class FeaturesModule { }

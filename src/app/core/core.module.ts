@@ -29,6 +29,7 @@ import { MatIconModule } from '@angular/material/icon';
   exports: [ // componentes o modulos que se van a usar en otro lado
     NgbModule,
     NavbarComponent,
+    FooterComponent,
     MatButtonModule,
     MatGridListModule,
     MatCardModule,

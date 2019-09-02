@@ -8,6 +8,9 @@
     }
     a {
         color: $indigo50;
+        &.dropdown-item {
+            color: $indigo500;
+        }
     }
 }
 .bg-urquiza {

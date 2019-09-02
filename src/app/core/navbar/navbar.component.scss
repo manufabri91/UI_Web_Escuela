@@ -2,6 +2,7 @@
 
 .navbar {
     font-weight: 500;
+    height: 80px;
     .login-boton {
         background-color: red;
     }
@@ -10,5 +11,5 @@
     }
 }
 .bg-urquiza {
-    background: $indigo900;
+    background: $indigo500;
 }

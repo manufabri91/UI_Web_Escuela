@@ -10,15 +10,15 @@
   justify-content: center;
   box-shadow: 0 1px 5px 1px rgba(0,0,0,.2), 0 0px 0px 0 rgba(0,0,0,.14), 0 0px 0px 0 rgba(0,0,0,.12);
   .fotos-escuela {
-    max-width: 70vw;
+    max-width: 99vw;
     max-height: 70vh;
     overflow: hidden;
-    .foto {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 50%;
-    }
+    // .foto {
+    //   display: block;
+    //   margin-left: auto;
+    //   margin-right: auto;
+    //   width: 50%;
+    // }
   }
 }
 
@@ -31,6 +31,8 @@
 }
 
 .example-card {
+  display: flex;
+  flex-direction: column;
   max-width: 30%;
   background-color: #e9ecef;
   box-shadow: 0 1px 5px 1px rgba(0,0,0,.2), 0 0px 0px 0 rgba(0,0,0,.14), 0 0px 0px 0 rgba(0,0,0,.12);
@@ -42,7 +44,12 @@
 
 .mat-card-header {
   height:15%;
-  }
+}
+
+
+.mat-card-image {
+  margin-top: 16px;
+}
 
 // @media screen and (max-width: 576px) {
 //   // .container-grid {
@@ -59,11 +66,10 @@
     align-items: center;
   }
   .example-card {
-    max-width: 60%;
-    margin-top: 2%;
+    max-width: 90%;
+    margin-top: 5%;
     margin-bottom: 2%;
   }
-
 }
 
 .jumbotron {

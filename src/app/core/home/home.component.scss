@@ -33,18 +33,40 @@
 }
 
 .example-header-image {
-  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
   background-size: cover;
 }
 
 .mat-card-action {
   width: 100%
 }
-@media screen and (max-width: 720px) {
+
+// @media screen and (max-width: 576px) {
+//   // .container-grid {
+//   //   flex-direction: column;
+//   // }
+//   // .example-card {
+//   //   max-width: initial;
+//   // }
+// }
+
+@media screen and (max-width: 768px) {
   .container-grid {
     flex-direction: column;
   }
   .example-card {
     max-width: initial;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  // .container-grid {
+  //   flex-direction: column;
+  // }
+  // .example-card {
+  //   max-width: initial;
+  // }
+
+.mat-card-header {
+  height:22%;
   }
 }

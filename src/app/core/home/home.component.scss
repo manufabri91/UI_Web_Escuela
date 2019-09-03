@@ -8,6 +8,7 @@
   margin-top: 2%;
   display: flex;
   justify-content: center;
+  box-shadow: 0 1px 5px 1px rgba(0,0,0,.2), 0 0px 0px 0 rgba(0,0,0,.14), 0 0px 0px 0 rgba(0,0,0,.12);
   .fotos-escuela {
     max-width: 70vw;
     max-height: 70vh;
@@ -26,19 +27,22 @@
   flex-direction: row;
   justify-content: space-around;
   margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 .example-card {
   max-width: 30%;
+  background-color: #e9ecef;
+  box-shadow: 0 1px 5px 1px rgba(0,0,0,.2), 0 0px 0px 0 rgba(0,0,0,.14), 0 0px 0px 0 rgba(0,0,0,.12);
 }
 
 .example-header-image {
   background-size: cover;
 }
 
-.mat-card-action {
-  width: 100%
-}
+.mat-card-header {
+  height:15%;
+  }
 
 // @media screen and (max-width: 576px) {
 //   // .container-grid {
@@ -49,24 +53,37 @@
 //   // }
 // }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .container-grid {
     flex-direction: column;
+    align-items: center;
   }
   .example-card {
-    max-width: initial;
+    max-width: 60%;
+    margin-top: 2%;
+    margin-bottom: 2%;
   }
+
 }
 
-@media screen and (max-width: 992px) {
-  // .container-grid {
-  //   flex-direction: column;
-  // }
-  // .example-card {
-  //   max-width: initial;
-  // }
-
-.mat-card-header {
-  height:22%;
-  }
+.jumbotron {
+  color: #E8EAF6;
+  background-color: $indigo500;
+  box-shadow: 0 1px 5px 1px rgba(0,0,0,.2), 0 0px 0px 0 rgba(0,0,0,.14), 0 0px 0px 0 rgba(0,0,0,.12);
 }
+
+// @media screen and (max-width: 1000px) {
+//   // .container-grid {
+//   //   flex-direction: column;
+//   // }
+//   // .example-card {
+//   //   max-width: initial;
+//   // }
+//   .example-card {
+//     max-width: 30%;
+//   }
+
+// .mat-card-header {
+//   height:22%;
+//   }
+// }

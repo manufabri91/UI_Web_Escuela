@@ -19,6 +19,7 @@
             <a class="nav-link" [routerLink]="">Sobre nosotros</a>
         </li>
       </ul>
+      <div *ngIf="isLogueado()" class=""></div>
       <a [routerLink]="'login'"><button mat-raised-button>LOGIN</button></a>
     </div>
   </nav>

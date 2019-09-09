@@ -23,8 +23,7 @@ export class HomeComponent implements OnInit {
    config.showNavigationArrows = true;
    config.showNavigationIndicators = true;
 
-   this.images.push({path: '/assets/img/foto1.jpg', titulo: 'Escuela Urquiza', desc: ''});
-   this.images.push({path: '/assets/img/foto2.jpg', titulo: 'Escuela Urquiza', desc: ''});
+   this.images.push({path: '/assets/img/foto2arreglada.png', titulo: 'Escuela Urquiza', desc: ''});
    this.images.push({path: '/assets/img/foto1arreglada.png', titulo: 'Escuela Urquiza', desc: ''});
   }
 

@@ -19,7 +19,7 @@ export class ModificarAlumnoComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.paramMap.subscribe(params => {
-      const id = +params.get('id');
+      const id = +params.get('legajo');
       this.loadAlumno(id);      
     });
   }

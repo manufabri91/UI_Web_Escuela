@@ -13,6 +13,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { MatTableModule } from '@angular/material/table';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [HomeComponent, NavbarComponent, FooterComponent],
@@ -24,7 +27,10 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     MatGridListModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    MatTableModule,
+    MatDividerModule,
+    MatTabsModule
   ],
   exports: [ // componentes o modulos que se van a usar en otro lado
     NgbModule,
@@ -33,7 +39,10 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     MatGridListModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    MatTableModule,
+    MatDividerModule,
+    MatTabsModule
   ],
   providers: [ // servicios a proveer
     AlumnoService,

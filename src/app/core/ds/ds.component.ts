@@ -1,12 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Materia } from '../models/Materia';
 
-export interface MateriasPrimero {
-  nombre: string;
-  regimen: string;
-  hs: number;
-}
-
-const ELEMENT_MATERIA1: MateriasPrimero[] = [
+const ELEMENT_MATERIA1: Materia[] = [
   { nombre: 'Comunicación', regimen: 'Cuatr. 1', hs: 3 },
   { nombre: 'Unidad de Definición Institucional I', regimen: 'Cuatr. 2', hs: 3 },
   { nombre: 'Matemática', regimen: 'Anual', hs: 4 },
@@ -18,13 +13,8 @@ const ELEMENT_MATERIA1: MateriasPrimero[] = [
   { nombre: 'Sistemas Operativos', regimen: 'Anual', hs: 4 },
 ];
 
-export interface MateriasSegundo {
-  nombre: string;
-  regimen: string;
-  hs: number;
-}
 
-const ELEMENT_MATERIA2: MateriasSegundo[] = [
+const ELEMENT_MATERIA2: Materia[] = [
   { nombre: 'Problemáticas Socio Contempráneas', regimen: 'Cuatr. 1', hs: 3 },
   { nombre: 'Unidad de Definición Institucional II', regimen: 'Cuatr. 2', hs: 3 },
   { nombre: 'Inglés Técnico II', regimen: 'Anual', hs: 3 },
@@ -36,13 +26,8 @@ const ELEMENT_MATERIA2: MateriasSegundo[] = [
   { nombre: 'Práctica Profesionalizante I', regimen: 'Anual', hs: 4 },
 ];
 
-export interface MateriasTercero {
-  nombre: string;
-  regimen: string;
-  hs: number;
-}
 
-const ELEMENT_MATERIA3: MateriasTercero[] = [
+const ELEMENT_MATERIA3: Materia[] = [
   { nombre: 'Ética y Responsabilidad Social', regimen: 'Cuatr. 1', hs: 3 },
   { nombre: 'Derecho y Legislación Laboral', regimen: 'Cuatr. 2', hs: 3 },
   { nombre: 'Redes y Comunicación', regimen: 'Anual', hs: 4 },

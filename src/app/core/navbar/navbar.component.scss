@@ -1,0 +1,20 @@
+@import 'src/app/styles/colores';
+
+.navbar {
+    font-weight: 500;
+    .login-boton {
+        background-color: red;
+    }
+    a {
+        color: $indigo50;
+        &.dropdown-item {
+            color: $indigo500;
+        }
+    }
+}
+.navbar-brand {
+    font-size: 2rem;
+}
+.bg-urquiza {
+    background: $indigo500;
+}

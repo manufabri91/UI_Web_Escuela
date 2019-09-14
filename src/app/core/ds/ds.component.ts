@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Materia } from '../models/Materia';
+import { Materia } from '../models/materia';
 
 const ELEMENT_MATERIA1: Materia[] = [
   { nombre: 'Comunicación', regimen: 'Cuatr. 1', hs: 3 },

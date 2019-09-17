@@ -1,0 +1,30 @@
+@import "src/app/styles/colores";
+
+.container-fluid {
+  padding: 0 10%;
+}
+.container-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+@media screen and (max-width: 1000px) {
+  .container-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.jumbotron {
+  color: #E8EAF6;
+  background-color: $indigo500;
+  box-shadow: 0 1px 5px 1px rgba(0,0,0,.2), 0 0px 0px 0 rgba(0,0,0,.14), 0 0px 0px 0 rgba(0,0,0,.12);
+  margin-top: 2%;
+}
+table {
+    width: 100%;
+  }
+.mat-elevation-z8 {
+    width: 100%;
+}

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { JwtHelperService } from '@auth0/angular-jwt';
 
 @Injectable()
 export class LoginService {
@@ -8,7 +9,7 @@ export class LoginService {
   uri = 'https://apisitiou.herokuapp.com/';
   token: string;
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router, private jwt: JwtHelperService) { }
 
   login(username: string, password: string) {
     this.http
@@ -27,7 +28,7 @@ export class LoginService {
   }
 
   public get isLogeado(): boolean {
-    return (localStorage.getItem('token') !== null);
+    return (localStorage.getItem('token') !== null && this.jwt.isTokenExpired(localStorage.getItem('token')));
   }
 
 }

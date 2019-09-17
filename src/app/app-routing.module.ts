@@ -5,12 +5,27 @@ import { CareerDetailComponent } from './features/career-detail/career-detail.co
 import { AltaAlumnoComponent } from './features/alta-alumno/alta-alumno.component';
 import { MenuAlumnoComponent } from './features/menu-alumno/menu-alumno.component';
 import { ModificarAlumnoComponent } from './features/modificar-alumno/modificar-alumno.component';
+import { DsComponent } from './core/ds/ds.component';
+import { AfComponent } from './core/af/af.component';
+import { ItComponent } from './core/it/it.component';
 
 const routes: Routes = [
   // {
   //   path: 'posts',
   //   loadChildren: './features/posts/posts.module#PostsModule'
   // },
+  {
+    path: 'it',
+    component: ItComponent
+  },
+  {
+    path: 'af',
+    component: AfComponent
+  },
+  {
+    path: 'ds',
+    component: DsComponent
+  },
   {
     path: 'carrera',
     component: CareerDetailComponent

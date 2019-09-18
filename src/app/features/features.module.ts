@@ -11,6 +11,7 @@ import { ModificarAlumnoComponent } from './modificar-alumno/modificar-alumno.co
 import { MatTableModule} from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [CareerDetailComponent, AltaAlumnoComponent, MenuAlumnoComponent, FormAlumnoComponent, ModificarAlumnoComponent],
@@ -21,7 +22,8 @@ import { MatIconModule } from '@angular/material/icon';
     RouterModule,
     MatTableModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSnackBarModule
   ],
   exports: []
 })

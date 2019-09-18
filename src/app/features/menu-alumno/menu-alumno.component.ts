@@ -9,21 +9,31 @@ import { AlumnoService } from 'src/app/core/services/alumno.service';
 })
 export class MenuAlumnoComponent implements OnInit {
 
-  displayedColumns: string[] = ['legajo', 'nombre', 'apellido', 'nacimiento', 'dni', 'telefono','modificar','eliminar'];
-  dataSource:[];
-  _alumnoService: any;
-  constructor(alumnoService : AlumnoService) {
-    this._alumnoService = alumnoService;
-   }
+  public displayedColumns: string[] = ['legajo', 'nombre', 'apellido', 'nacimiento', 'dni', 'telefono', 'modificar', 'eliminar'];
+  public alumnos: Alumno[];
+
+  constructor(private alumnoService: AlumnoService) { }
 
   ngOnInit() {
-    this._alumnoService.listarAlumnos().toPromise().then(elem => {
-      this.dataSource = elem;
+    this.alumnoService.listarAlumnos().subscribe(response => {
+      this.alumnos = response;
+    },
+    error => {
+      console.log(`Error: ${error}`);
+      // TODO: mostrar toaster?
     });
   }
-  eliminar(legajo){
-    this._alumnoService.e
 
+  eliminarAlumno(legajo: number) {
+    this.alumnoService.borrarAlumno(legajo).subscribe(response => {
+      this.alumnoService.listarAlumnos().subscribe(alumnos => {
+        this.alumnos = alumnos;
+      });
+    },
+    error => {
+      console.log(`Error: ${error}`);
+      // TODO: mostrar toaster?
+    });
   }
 
 }

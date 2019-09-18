@@ -8,8 +8,9 @@ import { RouterModule } from '@angular/router';
 import { MenuAlumnoComponent } from './menu-alumno/menu-alumno.component';
 import { FormAlumnoComponent } from './form-alumno/form-alumno.component';
 import { ModificarAlumnoComponent } from './modificar-alumno/modificar-alumno.component';
-import {MatTableModule} from '@angular/material/table'; 
-import {MatButtonModule} from '@angular/material/button'; 
+import { MatTableModule} from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [CareerDetailComponent, AltaAlumnoComponent, MenuAlumnoComponent, FormAlumnoComponent, ModificarAlumnoComponent],
@@ -19,6 +20,7 @@ import {MatButtonModule} from '@angular/material/button';
     ReactiveFormsModule,
     RouterModule,
     MatTableModule,
+    MatIconModule,
     MatButtonModule
   ],
   exports: []

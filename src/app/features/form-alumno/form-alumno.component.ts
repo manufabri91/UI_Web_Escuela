@@ -1,7 +1,7 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
-import { Alumno } from 'src/app/core/models/alumno';
-import { IAlumno } from 'src/app/shared/IAlumno';
 import { FormGroup, FormControl, Validators, FormArray, FormBuilder } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { AlumnoService } from 'src/app/core/services/alumno.service';
 
 @Component({
   selector: 'app-form-alumno',
@@ -11,14 +11,15 @@ import { FormGroup, FormControl, Validators, FormArray, FormBuilder } from '@ang
 export class FormAlumnoComponent implements OnInit {
 
   @Input()
-  public alumno: Alumno;
+  public legajoEdit: number;
 
   @Output()
   private formSubmitted: EventEmitter<FormGroup> = new EventEmitter<FormGroup>();
   private alumnoForm: FormGroup;
+  submitted = false;
 
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private alumnoService: AlumnoService) {
     this.alumnoForm = this.fb.group({
       legajo: new FormControl('', [
         Validators.required,
@@ -49,14 +50,16 @@ export class FormAlumnoComponent implements OnInit {
 
   ngOnInit(): void {
     const alumnoControls = this.alumnoForm.controls;
-    if (this.alumno) {
-      alumnoControls.legajo.setValue(this.alumno.legajo);
-      alumnoControls.nombre.setValue(this.alumno.nombre);
-      alumnoControls.apellido.setValue(this.alumno.apellido);
-      alumnoControls.nacimiento.setValue(this.alumno.nacimiento);
-      alumnoControls.dni.setValue(this.alumno.dni);
-      alumnoControls.nacimiento.setValue(this.alumno.telefono);
-    } else{
+    if (this.legajoEdit) {
+      this.alumnoService.getAlumno(this.legajoEdit).subscribe(alumno => {
+        alumnoControls.legajo.setValue(alumno.legajo);
+        alumnoControls.nombre.setValue(alumno.nombre);
+        alumnoControls.apellido.setValue(alumno.apellido);
+        alumnoControls.nacimiento.setValue(alumno.nacimiento);
+        alumnoControls.dni.setValue(alumno.dni);
+        alumnoControls.telefono.setValue(alumno.telefono);
+      });
+    } else {
       alumnoControls.legajo.disable();
     }
   }
@@ -66,7 +69,7 @@ export class FormAlumnoComponent implements OnInit {
   get nacimiento() { return this.alumnoForm.get('nacimiento'); }
   get dni() { return this.alumnoForm.get('dni'); }
   get telefono() { return this.alumnoForm.get('telefono'); }
-  submitted = false;
+
   onSubmit() {
     if (this.alumnoForm.valid) {
       this.submitted = true;

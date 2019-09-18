@@ -30,11 +30,4 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  testapi() {
-
-    this.alumnoService.listarAlumnos()
-    .pipe(
-      map(resp => this.alumnos = resp)
-    ).subscribe();
-  }
 }

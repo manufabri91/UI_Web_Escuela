@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AlumnoService } from 'src/app/core/services/alumno.service';
 import { Alumno } from 'src/app/core/models/alumno';
 import { FormGroup } from '@angular/forms';
@@ -10,25 +10,28 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./modificar-alumno.component.scss']
 })
 export class ModificarAlumnoComponent implements OnInit {
-  private readonly _alumnoService: AlumnoService;
-  alumno : Alumno;
+
+  legajo: number;
+
   constructor(private activatedRoute: ActivatedRoute,
-              alumnoService : AlumnoService) { 
-                this._alumnoService = alumnoService;
-              }
+              private alumnoService: AlumnoService,
+              private router: Router) { }
 
   ngOnInit() {
     this.activatedRoute.paramMap.subscribe(params => {
-      const id = +params.get('legajo');
-      this.loadAlumno(id);      
+      this.legajo = +params.get('legajo');
     });
   }
-  loadAlumno(id: number) : void {
-    this._alumnoService.getAlumno(id).toPromise().then(elem => {
-        this.alumno = elem;
-      });
-  }
-  actualizarAlumno(formGroup: FormGroup){
-    this._alumnoService.actualizarAlumnos(formGroup.value);
+
+  actualizarAlumno(formGroup: FormGroup) {
+    const alumno = new Alumno(formGroup.value);
+    console.log(alumno.nacimiento);
+    this.alumnoService.actualizarAlumnos(alumno).subscribe(resp => {
+      this.router.navigate(['menu-alumno']);
+    },
+    err => {
+      console.log(err);
+      // TODO: mostrar toaster?
+    });
   }
 }

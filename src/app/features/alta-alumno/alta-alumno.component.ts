@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { IAlumno } from 'src/app/shared/IAlumno';
 import { AlumnoService } from 'src/app/core/services/alumno.service';
 import { Alumno } from 'src/app/core/models/alumno';
-import { FormGroup, FormControl, FormArray } from '@angular/forms';
-import { Validators } from '@angular/forms';
-import { map } from 'rxjs/operators';
+import { FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-alta-alumno',
@@ -14,7 +12,7 @@ import { map } from 'rxjs/operators';
 export class AltaAlumnoComponent implements OnInit {
 
 
-  constructor(private alumnoService: AlumnoService) { }
+  constructor(private alumnoService: AlumnoService, private router: Router) { }
 
   ngOnInit() {
 
@@ -23,7 +21,7 @@ export class AltaAlumnoComponent implements OnInit {
   public submitForm(formGroup: FormGroup): void {
     const alumno = new Alumno(formGroup.value);
     this.alumnoService.cargarAlumnos(alumno).subscribe(result => {
-        location.assign('/listar-alumnos');
+        this.router.navigate(['/menu-alumno']);
       });
   }
 

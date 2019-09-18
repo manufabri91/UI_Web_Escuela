@@ -22,13 +22,13 @@ export class LoginService {
       );
   }
 
+  isLogueado(): boolean {
+    const token = localStorage.getItem('token');
+    return (token && !this.jwt.isTokenExpired(token));
+  }
+
   logout() {
     localStorage.removeItem('token');
-    this.router.navigate(['/login']);
+    this.router.navigate(['/']);
   }
-
-  public get isLogeado(): boolean {
-    return (localStorage.getItem('token') !== null && this.jwt.isTokenExpired(localStorage.getItem('token')));
-  }
-
 }

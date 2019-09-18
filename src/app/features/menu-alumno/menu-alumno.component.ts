@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Alumno } from 'src/app/core/models/alumno';
+import { AlumnoService } from 'src/app/core/services/alumno.service';
 
 @Component({
   selector: 'app-menu-alumno',
@@ -8,9 +9,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuAlumnoComponent implements OnInit {
 
-  constructor() { }
+  public displayedColumns: string[] = ['legajo', 'nombre', 'apellido', 'nacimiento', 'dni', 'telefono', 'modificar', 'eliminar'];
+  public alumnos: Alumno[];
+
+  constructor(private alumnoService: AlumnoService) { }
 
   ngOnInit() {
+    this.alumnoService.listarAlumnos().subscribe(response => {
+      this.alumnos = response;
+    },
+    error => {
+      console.log(`Error: ${error}`);
+      // TODO: mostrar toaster?
+    });
+  }
+
+  eliminarAlumno(legajo: number) {
+    this.alumnoService.borrarAlumno(legajo).subscribe(response => {
+      this.alumnoService.listarAlumnos().subscribe(alumnos => {
+        this.alumnos = alumnos;
+      });
+    },
+    error => {
+      console.log(`Error: ${error}`);
+      // TODO: mostrar toaster?
+    });
   }
 
 }

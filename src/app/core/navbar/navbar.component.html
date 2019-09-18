@@ -20,8 +20,15 @@
           <a class="nav-link" href="#">Sobre Nosotros</a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <a [routerLink]="'login'"><button mat-raised-button>Ingresar</button></a>
+      <form class="form-inline my-2 my-lg-0 botones">
+        <a *ngIf="!loginService.isLogueado()" [routerLink]="'login'"><button mat-raised-button>Ingresar</button></a>
+        <div *ngIf="loginService.isLogueado()" ngbDropdown>
+          <button type="button" ngbDropdownToggle mat-raised-button>Administración</button>
+          <div ngbDropdownMenu>
+            <button type="button" ngbDropdownItem [routerLink]="'/menu-alumno'">Gestión de Alumnos</button>
+            <button type="button" ngbDropdownItem (click)='loginService.logout()'>Cerrar Sesión</button>
+          </div>
+        </div>
       </form>
     </div>
   </nav>

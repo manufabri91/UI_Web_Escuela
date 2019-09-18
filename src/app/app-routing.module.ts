@@ -8,6 +8,7 @@ import { ModificarAlumnoComponent } from './features/modificar-alumno/modificar-
 import { DsComponent } from './core/ds/ds.component';
 import { AfComponent } from './core/af/af.component';
 import { ItComponent } from './core/it/it.component';
+import { AuthGuard } from './core/guards/auth.guard';
 
 const routes: Routes = [
   // {
@@ -32,15 +33,18 @@ const routes: Routes = [
   },
   {
     path: 'menu-alumno',
-    component: MenuAlumnoComponent
+    component: MenuAlumnoComponent,
+    canActivate: [AuthGuard]
   },
   {
-    path: 'modificar-alumno',
-    component: ModificarAlumnoComponent
+    path: 'modificar-alumno/:legajo',
+    component: ModificarAlumnoComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'alta-alumno',
-    component: AltaAlumnoComponent
+    component: AltaAlumnoComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'login',

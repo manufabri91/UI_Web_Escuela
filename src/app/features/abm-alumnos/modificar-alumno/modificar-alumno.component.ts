@@ -27,7 +27,7 @@ export class ModificarAlumnoComponent implements OnInit {
     const alumno = new Alumno(formGroup.value);
     console.log(alumno.nacimiento);
     this.alumnoService.actualizarAlumnos(alumno).subscribe(resp => {
-      this.router.navigate(['menu-alumno']);
+      this.router.navigate(['abm-alumnos/menu-alumno']);
     },
     err => {
       console.log(err);

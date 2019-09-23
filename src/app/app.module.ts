@@ -6,19 +6,12 @@ import { CoreModule } from './core/core.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ErrorInterceptor } from './core/interceptors/error.interceptor';
 import { JwtModule } from '@auth0/angular-jwt';
-import { CareerDetailComponent } from './features/career-detail/career-detail.component';
 import { FeaturesModule } from './features/features.module';
-import { DsComponent } from './core/ds/ds.component';
-import { AfComponent } from './core/af/af.component';
-import { ItComponent } from './core/it/it.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    DsComponent,
-    AfComponent,
-    ItComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

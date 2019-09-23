@@ -14,7 +14,8 @@ import { AbmAlumnosRoutingModule } from './abm-alumnos/abm-alumnos-routing.modul
   imports: [
     CommonModule,
     CarrerasModule,
-    AbmAlumnosModule
+    AbmAlumnosModule,
+    MatSnackBarModule
   ],
   exports: []
 })

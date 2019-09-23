@@ -1,11 +1,15 @@
-#ingresarAlumnoBtnDiv {
-  display: flex;
-  margin-right: 5%;
-  justify-content: flex-end;
-}
-#ingresarAlumnoBtn {
-  margin: 1rem 0;
-}
-table {
-  width: 100%;
+.gestion-alumnos {
+  height: 80vh;
+  .titulo {
+    display: flex;
+    justify-content: center;
+  }
+  .agregarAlumno {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1% calc(5% - 20px);
+  }
+  .tabla {
+    width: 100%;
+  }
 }

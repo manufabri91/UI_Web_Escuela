@@ -1,5 +1,5 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-urquiza">
-    <a class="navbar-brand" href="#">Terciario Urquiza</a>
+    <a class="navbar-brand" href="#">Terciario Carlos S. Méndez</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -11,9 +11,9 @@
             Carreras
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" routerLink="ds">Desarrollo de Software</a>
-            <a class="dropdown-item" routerLink="af">Analista Funcional</a>
-            <a class="dropdown-item" routerLink="it">Soporte de Infraestructuras</a>
+            <a class="dropdown-item" routerLink="carreras/ds">Desarrollo de Software</a>
+            <a class="dropdown-item" routerLink="carreras/af">Analista Funcional</a>
+            <a class="dropdown-item" routerLink="carreras/it">Soporte de Infraestructuras</a>
           </div>
         </li>
         <li class="nav-item">
@@ -25,7 +25,7 @@
         <div *ngIf="loginService.isLogueado()" ngbDropdown>
           <button type="button" ngbDropdownToggle mat-raised-button>Administración</button>
           <div ngbDropdownMenu>
-            <button type="button" ngbDropdownItem [routerLink]="'/menu-alumno'">Gestión de Alumnos</button>
+            <button type="button" ngbDropdownItem [routerLink]="'abm-alumnos/menu-alumno'">Gestión de Alumnos</button>
             <button type="button" ngbDropdownItem (click)='loginService.logout()'>Cerrar Sesión</button>
           </div>
         </div>

@@ -16,8 +16,6 @@ export class HomeComponent implements OnInit {
   showNavigationIndicators = true;
   images = [];
 
-
-
   constructor(private alumnoService: AlumnoService, config: NgbCarouselConfig) {
    // customize default values of carousels used by this component tree
    config.showNavigationArrows = true;

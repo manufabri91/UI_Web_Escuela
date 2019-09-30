@@ -9,6 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { AbmAlumnosModule } from './abm-alumnos/abm-alumnos.module';
 import { CarrerasModule } from './carreras/carreras.module';
 import { AbmAlumnosRoutingModule } from './abm-alumnos/abm-alumnos-routing.module';
+import { CargaNoticiaComponent } from './noticias/carga-noticia/carga-noticia.component';
 @NgModule({
   declarations: [],
   imports: [

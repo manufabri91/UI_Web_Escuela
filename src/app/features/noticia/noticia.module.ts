@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { NoticiaRoutingModule } from './noticia-routing.module';
 import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -19,6 +20,7 @@ import { MatInputModule } from '@angular/material/input';
     NoticiaRoutingModule,
     MatFormFieldModule,
     MatInputModule,
+    MatButtonModule,
     MatSelectModule
   ]
 })

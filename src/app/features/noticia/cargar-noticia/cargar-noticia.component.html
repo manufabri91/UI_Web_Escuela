@@ -1,18 +1,24 @@
-<main class="container-fluid">
-    <div class="example-container">
-        <mat-form-field>
-            <input matInput placeholder="Título">
-        </mat-form-field>
-        
-        <mat-form-field>
-            <mat-select placeholder="Relevancia">
-                <mat-option value="option">Importante</mat-option>                
-                <mat-option value="option">No importante</mat-option>
-            </mat-select>
-        </mat-form-field>
+<main class="container-fluid cuerpo-noticias">
+    <div class="jumbotron">
+            <h1 class="display-3" align="center">AGREGAR NOTICIA</h1>
+            
+            <mat-form-field>
+                <input matInput placeholder="Título de la noticia">
+            </mat-form-field>
 
-        <mat-form-field>
-            <textarea matInput placeholder="Cuerpo de la noticia"></textarea>
-        </mat-form-field>
+            <mat-form-field>
+                <mat-select placeholder="Relevancia">
+                    <mat-option value="option">Importante</mat-option>
+                    <mat-option value="option">No importante</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field>
+                <textarea matInput placeholder="Cuerpo de la noticia"></textarea>
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" type="submit" align="center">Agregar noticia</button>
+
     </div>
+
 </main>

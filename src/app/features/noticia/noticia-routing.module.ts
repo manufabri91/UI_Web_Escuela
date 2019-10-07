@@ -9,10 +9,14 @@ const routes: Routes = [
     component: CargarNoticiaComponent,
     canActivate: [AuthGuard]
   },
-  {
-    path: '**',
-    redirectTo: ''
-  }
+  // {
+  //   path: '',
+  //   component: CargarNoticiaComponent // cambiar por lista de noticias
+  // },
+  // // {
+  // //   path: '**',
+  // //   redirectTo: ''
+  // // }
 ];
 
 

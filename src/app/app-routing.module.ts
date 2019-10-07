@@ -4,7 +4,7 @@ import { HomeComponent } from './core/home/home.component';
 
 const routes: Routes = [
   {
-    path: 'cargar-noticia',
+    path: 'noticias',
     loadChildren: './features/noticia/noticia.module#NoticiaModule'
   },
   {

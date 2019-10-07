@@ -21,7 +21,7 @@ export class AltaAlumnoComponent implements OnInit {
   public submitForm(formGroup: FormGroup): void {
     const alumno = new Alumno(formGroup.value);
     this.alumnoService.cargarAlumnos(alumno).subscribe(result => {
-        this.router.navigate(['abm-alumnos/menu-alumno']);
+        this.router.navigate(['/abm-alumnos/menu-alumno']);
       });
   }
 

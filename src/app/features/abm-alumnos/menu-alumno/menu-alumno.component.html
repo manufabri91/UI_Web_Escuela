@@ -2,7 +2,7 @@
     <div class="jumbotron">
     <header class="titulo"><h2>GESTIÓN DE ALUMNOS</h2></header>
     <div class="agregarAlumno">
-        <button mat-fab color="primary" [routerLink]="'abm-alumnos/alta-alumno'">
+        <button mat-fab color="primary" routerLink="/abm-alumnos/alta-alumno">
             <mat-icon>add</mat-icon>
         </button>
     </div>
@@ -45,7 +45,7 @@
             <ng-container matColumnDef="modificar">
                 <th mat-header-cell *matHeaderCellDef> Modificar </th>
                 <td mat-cell *matCellDef="let alumno">
-                    <button mat-raised-button [routerLink]="['abm-alumnos/modificar-alumno',alumno.legajo]"
+                    <button mat-raised-button [routerLink]="['/abm-alumnos/modificar-alumno',alumno.legajo]"
                         color="primary">Modificar</button>
                 </td>
             </ng-container>

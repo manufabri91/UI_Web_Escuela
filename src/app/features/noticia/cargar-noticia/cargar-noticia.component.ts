@@ -21,7 +21,7 @@ export class CargarNoticiaComponent implements OnInit {
   cargarNoticia() {
     this.noticia.importante = this.importante === 'I' ? true : false;
     this.noticiaService.cargarNoticias(this.noticia).subscribe(result => {
-      this.router.navigate(['']);
+      this.router.navigate(['/noticias/menu-noticias']);
     },
     error => {
       console.log(`Error: ${error}`);

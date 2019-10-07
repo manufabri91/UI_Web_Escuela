@@ -1,7 +1,7 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormArray, FormBuilder } from '@angular/forms';
 import { Observable } from 'rxjs';
-import { AlumnoService } from 'src/app/core/services/alumno.service';
+import { AlumnoService } from 'src/app/core/services/alumno/alumno.service';
 
 @Component({
   selector: 'app-form-alumno',

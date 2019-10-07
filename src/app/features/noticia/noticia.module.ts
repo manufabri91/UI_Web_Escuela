@@ -8,19 +8,26 @@ import { RouterModule } from '@angular/router';
 import { NoticiaRoutingModule } from './noticia-routing.module';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { NovedadesComponent } from './novedades/novedades.component';
+import { MenuNoticiaComponent } from './menu-noticia/menu-noticia.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTableModule } from '@angular/material/table';
 
 
 
 @NgModule({
-  declarations: [CargarNoticiaComponent],
+  declarations: [CargarNoticiaComponent, NovedadesComponent, MenuNoticiaComponent],
   imports: [
     CommonModule,
     RouterModule,
     FormsModule,
     NoticiaRoutingModule,
+    MatIconModule,
+    MatTableModule,
+    MatIconModule,
+    MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule,
     MatSelectModule
   ]
 })

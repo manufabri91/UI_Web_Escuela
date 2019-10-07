@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlumnoService } from 'src/app/core/services/alumno.service';
+import { AlumnoService } from 'src/app/core/services/alumno/alumno.service';
 import { Alumno } from 'src/app/core/models/alumno';
 import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';

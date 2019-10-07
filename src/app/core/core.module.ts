@@ -4,8 +4,8 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
-import { AlumnoService } from './services/alumno.service';
-import { LoginService } from './services/login.service';
+import { AlumnoService } from './services/alumno/alumno.service';
+import { LoginService } from './services/login/login.service';
 import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,6 +16,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatTabsModule } from '@angular/material/tabs';
+import { NoticiaService } from './services/noticias/noticia.service';
+import { DocenteService } from './services/docente/docente.service';
 
 @NgModule({
   declarations: [HomeComponent, NavbarComponent, FooterComponent],
@@ -46,7 +48,9 @@ import { MatTabsModule } from '@angular/material/tabs';
   ],
   providers: [ // servicios a proveer
     AlumnoService,
-    LoginService
+    LoginService,
+    NoticiaService,
+    DocenteService
   ]
 })
 export class CoreModule { }

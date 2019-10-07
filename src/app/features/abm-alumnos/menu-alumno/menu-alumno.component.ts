@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Alumno } from 'src/app/core/models/alumno';
-import { AlumnoService } from 'src/app/core/services/alumno.service';
+import { AlumnoService } from 'src/app/core/services/alumno/alumno.service';
 
 @Component({
   selector: 'app-menu-alumno',

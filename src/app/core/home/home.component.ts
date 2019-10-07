@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Alumno } from '../models/alumno';
-import { AlumnoService } from '../services/alumno.service';
+import { AlumnoService } from '../services/alumno/alumno.service';
 import { map } from 'rxjs/operators';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 

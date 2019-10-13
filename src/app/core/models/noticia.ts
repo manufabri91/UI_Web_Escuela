@@ -4,6 +4,7 @@ export class Noticia {
     id_novedad: number;
     titulo: string;
     cuerpo: string;
+    resumen: string;
     importante: boolean;
 
     constructor(rawjson?: any) {

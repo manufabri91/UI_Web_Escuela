@@ -9,7 +9,7 @@ import { NoticiaService } from 'src/app/core/services/noticias/noticia.service';
 })
 export class MenuNoticiaComponent implements OnInit {
 
-  public displayedColumns: string[] = ['id_novedad', 'titulo', 'cuerpo', 'importante', 'modificar', 'eliminar'];
+  public displayedColumns: string[] = ['id_novedad', 'titulo', 'cuerpo', 'resumen', 'importante', 'modificar', 'eliminar'];
   public noticias: Noticia[];
 
   constructor(private noticiaService: NoticiaService) { }

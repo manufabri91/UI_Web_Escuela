@@ -1,6 +1,6 @@
-<main class="container-fluid principal">
-    <div class="titular">
-        <h1 class="display-2" align="center">Newsletter</h1>
+<main class="container-fluid">
+    <div class="jumbotron jumbotron1">
+        <h1 class="display-2 typog" align="center">Newsletter</h1>
     </div>
     <article *ngFor="let noticia of noticias" class="noticia"
         [ngClass]="{'importante': noticia.importante, 'secundaria': !noticia.importante}">

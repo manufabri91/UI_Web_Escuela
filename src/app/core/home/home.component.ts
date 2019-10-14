@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Alumno } from '../models/alumno';
-import { AlumnoService } from '../services/alumno/alumno.service';
-import { map } from 'rxjs/operators';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import { NoticiaService } from '../services/noticias/noticia.service';
+import { Noticia } from '../models/noticia';
 
 @Component({
   selector: 'app-home',
@@ -11,13 +10,12 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 })
 export class HomeComponent implements OnInit {
 
-  alumnos: Alumno[];
+  titulares: Noticia[];
   showNavigationArrows = true;
   showNavigationIndicators = true;
   images = [];
 
-  constructor(private alumnoService: AlumnoService, config: NgbCarouselConfig) {
-   // customize default values of carousels used by this component tree
+  constructor(private noticiaService: NoticiaService, config: NgbCarouselConfig) {
    config.showNavigationArrows = true;
    config.showNavigationIndicators = true;
 
@@ -29,6 +27,13 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.noticiaService.listarNoticias().subscribe(response => {
+      this.titulares = response.filter(noticia => noticia.importante).slice(-3).reverse();
+    },
+    error => {
+      console.log(`Error: ${error}`);
+      // TODO: mostrar toaster?
+    });
   }
 
 }

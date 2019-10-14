@@ -1,0 +1,11 @@
+
+.noticia {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &.importante {
+        .titulo {
+            color: red;
+        }
+    }
+}

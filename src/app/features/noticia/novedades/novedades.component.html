@@ -1,1 +1,8 @@
-<p>{{ noticias | json }}</p>
+<main class="container-fluid principal">
+    <h2 class="text-center">NOTICIAS</h2>
+    <article *ngFor="let noticia of noticias" class="noticia" [ngClass]="{'importante': noticia.importante, 'secundaria': !noticia.importante}">
+            <div class="titulo">{{ noticia.titulo }}</div>
+            <div class="resumen">{{ noticia.resumen }}</div>
+            <div class="cuerpo">{{ noticia.cuerpo }}</div>
+    </article>
+</main>

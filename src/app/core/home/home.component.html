@@ -65,95 +65,35 @@
       </mat-card-actions>
     </mat-card>
   </div>
-  
+
   <div class="jumbotron">
     <h1 class="display-4" align="center">Terciario Carlos S. Méndez</h1>
     <p class="lead" align="center">Quienes somos.</p>
     <hr class="my-4">
     <p>
-      Somos un instituto de nivel terciario creado el 1 de mayo de 1999 por Disposición del presidente de turno, para la ciudad de Rosario. Esto fue posible por un acuerdo celebrado entre el Organismo Educativo de Orden Nacional y el Sindicato de Peones de Taxis; acuerdo rubricado el 19 de diciembre de 1999 mediante el Protocolo Nº 69.
-      Comenzamos a funcionar con la apertura de Primer Año en mayo de 1999. El terciario Carlos S. Mendez había sido creado para cursar la carrera de Técnico Superior en Analista de Sistemas de Computación.
-      En 2001 pasamos a la jurisdicción del Ministerio de Educación de la Provincia de Santa Fe, mediante Disposición Nº 170/30 y bajo la misma denominación.
-      En el año 2018 por Resolución Nº1984 del Ministerio de Educación de la Provincia de Santa Fe nuestro instituto actualizó las carreras a la denominación y alcance actual.</p>
+      Somos un instituto de nivel terciario creado el 1 de mayo de 1999 por Disposición del presidente de turno, para la
+      ciudad de Rosario. Esto fue posible por un acuerdo celebrado entre el Organismo Educativo de Orden Nacional y el
+      Sindicato de Peones de Taxis; acuerdo rubricado el 19 de diciembre de 1999 mediante el Protocolo Nº 69.
+      Comenzamos a funcionar con la apertura de Primer Año en mayo de 1999. El terciario Carlos S. Mendez había sido
+      creado para cursar la carrera de Técnico Superior en Analista de Sistemas de Computación.
+      En 2001 pasamos a la jurisdicción del Ministerio de Educación de la Provincia de Santa Fe, mediante Disposición Nº
+      170/30 y bajo la misma denominación.
+      En el año 2018 por Resolución Nº1984 del Ministerio de Educación de la Provincia de Santa Fe nuestro instituto
+      actualizó las carreras a la denominación y alcance actual.</p>
   </div>
 
-  <!-- <div class="card-columns">
-
-    <div class="card bg-dark text-white text-center">
-      <blockquote class="blockquote mb-0">
-        <p>Newsletter</p>
-        <footer class="blockquote-footer">
-          <small>
-            <cite title="Source Title">Terciario Méndez</cite>
-          </small>
-        </footer>
-      </blockquote>
-    </div>
-
-    <div class="card border-dark text-center p-3">
-      <div class="card-body">
-        <h5 class="card-title">Titulo Noticia</h5>
-        <p class="card-text">Cuerpo noticia</p>
-        <p class="card-text"><small class="text-muted">Día agregada</small></p>
-      </div>
-    </div>
-    
-    <div class="card border-dark text-center">
-      <div class="card-body">
-        <h5 class="card-title">Titulo Noticia</h5>
-        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industryaaaaaaaaaaaasssssssssssssss</p>
-        <p class="card-text"><small class="text-muted">Día agregada</small></p>
-      </div>
-    </div>
-
-    <div class="card border-dark text-center">
-      <div class="card-body">
-        <h5 class="card-title">Titulo Noticia</h5>
-        <p class="card-text">Cuerpo noticia</p>
-        <p class="card-text"><small class="text-muted">Día agregada</small></p>
-      </div>
-    </div>
-
-  </div> -->
-
-  <div class="container">
+  <div class="jumbotron bg-dark text-center">
+    <h1 class="display-4 text-white" align="center">Newsletter</h1>
+    <p class="lead text-white" align="center">Novedades relevantes para la comunidad educativa</p>
+    <hr class="my-4">
     <div class="row">
-      <div class="card tamaño bg-dark text-white text-center">
-        <blockquote class="blockquote mb-0">
-          <p>Newsletter</p>
-          <footer class="blockquote-footer">
-            <small>
-              <cite title="Source Title">Terciario Méndez</cite>
-            </small>
-          </footer>
-        </blockquote>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col centrado">
+      
+      <div *ngFor="let noticia of titulares" class="col noticia">
         <div class="card border-dark text-center mb-1">
           <div class="card-body">
-            <h5 class="card-title">Titulo Noticia</h5>
-            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industryaaaaaaaaaaaasssssssssssssss</p>
-            <p class="card-text"><small class="text-muted">Día agregada</small></p>
-          </div>
-        </div>
-      </div>
-      <div class="col centrado">
-        <div class="card border-dark text-center">
-          <div class="card-body">
-            <h5 class="card-title">Titulo Noticia</h5>
-            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industryaaaaaaaaaaaasssssssssssssss</p>
-            <p class="card-text"><small class="text-muted">Día agregada</small></p>
-          </div>
-        </div>
-      </div>
-      <div class="col centrado">
-        <div class="card border-dark text-center">
-          <div class="card-body">
-            <h5 class="card-title">Titulo Noticia</h5>
-            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industryaaaaaaaaaaaasssssssssssssss</p>
-            <p class="card-text"><small class="text-muted">Día agregada</small></p>
+            <h4 class="card-title">{{ noticia.titulo }}</h4>
+            <p class="card-text">{{ noticia.resumen }}</p>
+            <p class="card-text">{{ noticia.cuerpo }}</p>
           </div>
         </div>
       </div>

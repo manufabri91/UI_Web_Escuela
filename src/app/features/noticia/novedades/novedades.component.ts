@@ -14,7 +14,7 @@ export class NovedadesComponent implements OnInit {
 
   ngOnInit() {
     this.noticiaService.listarNoticias().subscribe(response => {
-      this.noticias = response;
+      this.noticias = response.reverse();
     },
     error => {
       console.log(`Error: ${error}`);

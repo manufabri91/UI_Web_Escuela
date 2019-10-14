@@ -1,8 +1,16 @@
 <main class="container-fluid principal">
-    <h2 class="text-center">NOTICIAS</h2>
-    <article *ngFor="let noticia of noticias" class="noticia" [ngClass]="{'importante': noticia.importante, 'secundaria': !noticia.importante}">
-            <div class="titulo">{{ noticia.titulo }}</div>
-            <div class="resumen">{{ noticia.resumen }}</div>
-            <div class="cuerpo">{{ noticia.cuerpo }}</div>
+    <div class="titular">
+        <h1 class="display-2" align="center">Newsletter</h1>
+    </div>
+    <article *ngFor="let noticia of noticias" class="noticia"
+        [ngClass]="{'importante': noticia.importante, 'secundaria': !noticia.importante}">
+        <div class="jumbotron jumbotron3">
+            <h1 class="display-4 titulo" align="center">{{ noticia.titulo }}</h1>
+            <p class="lead" align="center">{{ noticia.resumen }}</p>
+            <hr class="my-4">
+            <p class="pdiseño">
+                {{ noticia.cuerpo }}
+            </p>
+        </div>
     </article>
 </main>

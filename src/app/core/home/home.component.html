@@ -22,7 +22,7 @@
       </mat-card-header>
       <img mat-card-image src="/assets/img/ds.png" alt="DS">
       <mat-card-content>
-        <p>
+        <p class="typog">
           Participará en proyectos de desarrollo desempeñando los roles que tienen por objeto producir, modoficar y
           testear
           artefactos de
@@ -40,7 +40,7 @@
       </mat-card-header>
       <img mat-card-image src="/assets/img/af.png" alt="Photo of a Shiba Inu">
       <mat-card-content>
-        <p>
+        <p class="typog">
           Especializado en crear y/o interpretar los negocios de una organización, analizar sus procesos y averiguar las
           necesidades de la información...
         </p>
@@ -56,7 +56,7 @@
       </mat-card-header>
       <img mat-card-image src="/assets/img/it.png" alt="IT">
       <mat-card-content>
-        <p> Capacitado para implementar, mantener, actualizar, analizar y resolver problemas derivados de
+        <p class="typog"> Capacitado para implementar, mantener, actualizar, analizar y resolver problemas derivados de
           la operación de productos tecnológicos...
         </p>
       </mat-card-content>
@@ -70,7 +70,7 @@
     <h1 class="display-4" align="center">Terciario Carlos S. Méndez</h1>
     <p class="lead" align="center">Quienes somos.</p>
     <hr class="my-4">
-    <p>
+    <p class="typog">
       Somos un instituto de nivel terciario creado el 1 de mayo de 1999 por Disposición del presidente de turno, para la
       ciudad de Rosario. Esto fue posible por un acuerdo celebrado entre el Organismo Educativo de Orden Nacional y el
       Sindicato de Peones de Taxis; acuerdo rubricado el 19 de diciembre de 1999 mediante el Protocolo Nº 69.
@@ -82,17 +82,16 @@
       actualizó las carreras a la denominación y alcance actual.</p>
   </div>
 
-  <div class="jumbotron bg-dark text-center">
-    <h1 class="display-4 text-white" align="center">Newsletter</h1>
-    <p class="lead text-white" align="center">Novedades relevantes para la comunidad educativa</p>
-    <hr class="my-4">
+  <div class="jumbotron jumbotron2 text-black">
+    <h1 class="display-4 text-black" align="center">Newsletter</h1>
+    <p class="lead text-black" align="center">Novedades relevantes para la comunidad educativa</p>
+    <hr class="my-3">
     <div class="row">
-      
       <div *ngFor="let noticia of titulares" class="col noticia">
-        <div class="card border-dark text-center mb-1">
+        <div class="card border-transparent mb-3">
+          <div class="card-header border-transparent">{{ noticia.titulo }}</div>
           <div class="card-body">
-            <h4 class="card-title">{{ noticia.titulo }}</h4>
-            <p class="card-text">{{ noticia.resumen }}</p>
+            <h5 class="card-title">{{ noticia.resumen }}</h5>
             <p class="card-text">{{ noticia.cuerpo }}</p>
           </div>
         </div>

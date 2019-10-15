@@ -16,6 +16,10 @@ const routes: Routes = [
     loadChildren: './features/abm-alumnos/abm-alumnos.module#AbmAlumnosModule'
   },
   {
+    path: 'abm-docentes',
+    loadChildren: './features/abm-docentes/abm-docentes/abm-docentes.module#AbmDocentesModule'
+  },
+  {
     path: 'carreras',
     loadChildren: './features/carreras/carreras.module#CarrerasModule'
   },

@@ -19,6 +19,9 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="noticias">Noticias</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'abm-docentes/abm-docentes/menu-docente'">Gestión de Docentes</a>
+        </li>
       </ul>
       <form class="form-inline my-2 my-lg-0 botones">
         <a *ngIf="!loginService.isLogueado()" [routerLink]="'login'"><button mat-raised-button>Ingresar</button></a>

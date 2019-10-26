@@ -1,9 +1,10 @@
 <main class="container-fluid cuerpo-noticias">
     <div class="jumbotron">
-        <h1 class="display-3" align="center">AGREGAR NOTICIA</h1>
-
-        <mat-form-field>
-            <input matInput placeholder="Título de la noticia" [(ngModel)]="noticia.titulo">
+        <h1 align="center">Agregar noticia</h1>
+        
+        <mat-form-field hintLabel="Máximo 40 caracteres">
+            <input matInput #input maxlength="40" placeholder="Titulo" [(ngModel)]="noticia.titulo">
+            <mat-hint align="end">{{input.value?.length || 0}}/40</mat-hint>
         </mat-form-field>
 
         <mat-form-field>
@@ -22,8 +23,7 @@
             <textarea matInput placeholder="Cuerpo de la noticia" [(ngModel)]="noticia.cuerpo"></textarea>
         </mat-form-field>
 
-        <button mat-raised-button color="primary" type="submit" align="center" (click)="cargarNoticia()">Agregar
-            noticia</button>
+        <button mat-raised-button color="primary" type="submit" align="center" (click)="cargarNoticia()">Guardar</button>
 
     </div>
 

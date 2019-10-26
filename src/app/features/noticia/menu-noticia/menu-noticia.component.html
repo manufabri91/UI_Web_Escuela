@@ -1,13 +1,12 @@
-<div class="container-fluid mt-3 gestion-alumnos">
-    <div class="jumbotron">
-    <header class="titulo"><h2>GESTIÓN DE NOTICIAS</h2></header>
+<div class="container-fluid mt-3 gestion-noticia">
+    <header class="titulo"><h2>Gestión de noticias</h2></header>
     <div class="agregarAlumno">
         <button mat-fab color="primary" routerLink="/noticias/cargar-noticia">
             <mat-icon>add</mat-icon>
         </button>
     </div>
-
-        <table mat-table [dataSource]="noticias" class="mat-elevation-z8 tabla">
+    <div class="tabla-container mat-elevation-z8">
+        <table mat-table [dataSource]="noticias" >
 
             <ng-container matColumnDef="id_novedad">
                 <th mat-header-cell *matHeaderCellDef> ID </th>

@@ -1,0 +1,47 @@
+<main class="container-fluid">
+        <form [formGroup]="docenteForm" (ngSubmit)="onSubmit()">
+            <div class="form-docente">
+                <mat-form-field *ngIf="this.legajoEdit">
+                    <input matInput placeholder="Legajo" formControlName="legajo">
+                    <mat-error>  
+                        <span *ngIf="legajo?.invalid && (legajo?.dirty || legajo?.touched)">El legajo es requerido</span>  
+                    </mat-error> 
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Nombre" formControlName="nombre">
+                    <mat-error>  
+                        <span *ngIf="nombre?.invalid && (nombre?.dirty || nombre?.touched)">El nombre es requerido</span>  
+                    </mat-error> 
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Apellido" formControlName="apellido">
+                    <mat-error>  
+                        <span *ngIf="apellido?.invalid && (apellido?.dirty || apellido?.touched)">El apellido es requerido</span>  
+                    </mat-error> 
+                </mat-form-field>
+                <mat-form-field class="demo-full-width">  
+                    <input formControlName="nacimiento" matInput [matDatepicker]="picker" placeholder="Fecha de Nacimiento">  
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>  
+                    <mat-datepicker #picker></mat-datepicker>
+                    <mat-error>  
+                        <span *ngIf="nacimiento?.invalid && (nacimiento?.dirty || nacimiento?.touched)">Fecha de nacimiento requerida</span>  
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="number" placeholder="DNI" formControlName="dni">
+                    <mat-error>  
+                        <span *ngIf="dni?.invalid && (dni?.dirty || dni?.touched)">El DNI es requerido y solo acepta números</span>  
+                    </mat-error> 
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="tel" placeholder="Teléfono" formControlName="telefono">
+                    <mat-error>  
+                        <span *ngIf="telefono?.invalid && (telefono?.dirty || telefono?.touched)">El número de teléfono es requerido</span>  
+                    </mat-error> 
+                </mat-form-field>
+                <div class="botones">
+                    <button mat-raised-button color="primary" type="submit">Guardar</button>
+                </div>
+            </div>
+        </form>
+    </main>

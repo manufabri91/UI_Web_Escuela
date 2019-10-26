@@ -26,6 +26,7 @@
           <button type="button" ngbDropdownToggle mat-raised-button>Administración</button>
           <div ngbDropdownMenu>
             <button type="button" ngbDropdownItem [routerLink]="'abm-alumnos/menu-alumno'">Gestión de Alumnos</button>
+            <button type="button" ngbDropdownItem [routerLink]="'abm-docentes/menu-docente'">Gestión de Docentes</button>
             <button type="button" ngbDropdownItem [routerLink]="'noticias/menu-noticias'">Gestión de Noticias</button>
             <button type="button" ngbDropdownItem (click)='loginService.logout()'>Cerrar Sesión</button>
           </div>

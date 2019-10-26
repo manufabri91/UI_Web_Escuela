@@ -1,63 +1,47 @@
-<form [formGroup]="docenteForm" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <label for="legajo">Legajo</label>
-      <input type="number" class="form-control" id="legajoInput" formControlName="legajo" name="legajo" required>
-      <div *ngIf="legajo?.invalid && (legajo?.dirty || legajo?.touched)" class="alert alert-danger">
-          <div *ngIf="legajo?.getError('required')">
-              Legajo es requerido
-          </div>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <label for="nombre">Nombre</label>
-      <input type="text" class="form-control" id="nombreInput" formControlName="nombre" name="nombre" required>
-      <div *ngIf="nombre?.invalid && (nombre?.dirty || nombre?.touched)" class="alert alert-danger">
-          <div *ngIf="nombre?.getError('required')">
-              Nombre es requerido
-          </div>
-      </div>
-    </div>
-
-    <div class="form-group">
-        <label for="apellido">Apellido</label>
-        <input type="text" class="form-control" id="apellidoInput" formControlName="apellido" name="apellido" required>
-        <div *ngIf="apellido?.invalid && (apellido?.dirty || apellido?.touched)" class="alert alert-danger">
-            <div *ngIf="apellido?.getError('required')">
-                Apellido es requerido
+<main class="container-fluid">
+        <form [formGroup]="docenteForm" (ngSubmit)="onSubmit()">
+            <div class="form-docente">
+                <mat-form-field *ngIf="this.legajoEdit">
+                    <input matInput placeholder="Legajo" formControlName="legajo">
+                    <mat-error>  
+                        <span *ngIf="legajo?.invalid && (legajo?.dirty || legajo?.touched)">El legajo es requerido</span>  
+                    </mat-error> 
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Nombre" formControlName="nombre">
+                    <mat-error>  
+                        <span *ngIf="nombre?.invalid && (nombre?.dirty || nombre?.touched)">El nombre es requerido</span>  
+                    </mat-error> 
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Apellido" formControlName="apellido">
+                    <mat-error>  
+                        <span *ngIf="apellido?.invalid && (apellido?.dirty || apellido?.touched)">El apellido es requerido</span>  
+                    </mat-error> 
+                </mat-form-field>
+                <mat-form-field class="demo-full-width">  
+                    <input formControlName="nacimiento" matInput [matDatepicker]="picker" placeholder="Fecha de Nacimiento">  
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>  
+                    <mat-datepicker #picker></mat-datepicker>
+                    <mat-error>  
+                        <span *ngIf="nacimiento?.invalid && (nacimiento?.dirty || nacimiento?.touched)">Fecha de nacimiento requerida</span>  
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="number" placeholder="DNI" formControlName="dni">
+                    <mat-error>  
+                        <span *ngIf="dni?.invalid && (dni?.dirty || dni?.touched)">El DNI es requerido y solo acepta números</span>  
+                    </mat-error> 
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="tel" placeholder="Teléfono" formControlName="telefono">
+                    <mat-error>  
+                        <span *ngIf="telefono?.invalid && (telefono?.dirty || telefono?.touched)">El número de teléfono es requerido</span>  
+                    </mat-error> 
+                </mat-form-field>
+                <div class="botones">
+                    <button mat-raised-button color="primary" type="submit">Guardar</button>
+                </div>
             </div>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="nacimiento">Nacimiento</label>
-        <input type="date" class="form-control" id="nacimientoInput" formControlName="nacimiento" name="nacimiento" required>
-        <div *ngIf="date?.invalid && (date?.dirty || date?.touched)" class="alert alert-danger">
-            <div *ngIf="date?.getError('required')">
-                Nacimiento es requerido
-            </div>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="dni">Dni</label>
-        <input type="number" class="form-control" id="dniInput" formControlName="dni" name="dni" required>
-        <div *ngIf="dni?.invalid && (dni?.dirty || dni?.touched)" class="alert alert-danger">
-            <div *ngIf="dni?.getError('required')">
-                Dni es requerido y solo acepta números
-            </div>
-        </div>
-    </div>
-
-    <div class="form-group"> 
-        <label for="telefono">Teléfono</label>
-        <input type="number" class="form-control" id="telefonInput" formControlName="telefono" name="telefono" required>
-        <div *ngIf="telefono?.invalid && (telefono?.dirty || telefono?.touched)" class="alert alert-danger">
-            <div *ngIf="telefono?.getError('required')">
-                Teléfono es requerido y solo acepta números
-            </div>
-        </div>
-    </div>
-
-    <button type="submit" [disabled]="!docenteForm.valid" mat-raised-button color="primary">GUARDAR</button>
-  </form>
+        </form>
+    </main>

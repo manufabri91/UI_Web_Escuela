@@ -1,16 +1,16 @@
 @import "src/app/styles/colores";
 
-  .jumbotron {
+.form-alumno {
+  display: flex;
+  flex-direction: column;
+  color: $indigo500;
+  background-color: $indigo50;
+  margin-top: 2%;
+  justify-content: center;
+  .botones {
     display: flex;
-    flex-direction: column;
-    color: #3950a2;
-    background-color: #E8EAF6;
-    margin-top: 2%;
-    justify-content: center;
-    .botones {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-      margin-top: 3%;
-    }
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 3%;
   }
+}

@@ -19,13 +19,13 @@ export class DocenteService {
     return this.httpClient.post<Docente[]>('https://apisitiou.herokuapp.com/docentes/cargar', docente);
   }
   public actualizarDocentes(docente: Docente): Observable<Docente> {
-    return this.httpClient.put<Docente>('https://apisitiou.herokuapp.com/dcentes/actualizar', docente);
+    return this.httpClient.put<Docente>('https://apisitiou.herokuapp.com/docentes/actualizar', docente);
   }
   public borrarDocente(legajo: number): Observable<any> {
-    return this.httpClient.delete<any>(`https://apisitiou.herokuapp.com/Docentes/borrar/${legajo}`);
+    return this.httpClient.delete<any>(`https://apisitiou.herokuapp.com/docentes/borrar/${legajo}`);
   }
   public getDocente(legajo: number): Observable<Docente> {
-    return this.httpClient.get<Docente>(`https://apisitiou.herokuapp.com/Docentes/getDocente/${legajo}`);
+    return this.httpClient.get<Docente>(`https://apisitiou.herokuapp.com/docentes/getDocente/${legajo}`);
   }
 
 }

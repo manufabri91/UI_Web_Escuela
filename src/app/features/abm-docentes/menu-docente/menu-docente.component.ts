@@ -23,7 +23,7 @@ export class MenuDocenteComponent implements OnInit {
       // TODO: mostrar toaster?
     });
   }
-  
+
   eliminarDocente(legajo: number) {
     this.docenteService.borrarDocente(legajo).subscribe(response => {
       this.docenteService.listarDocentes().subscribe(docentes => {

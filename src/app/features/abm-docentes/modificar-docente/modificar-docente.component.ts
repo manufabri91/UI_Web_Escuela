@@ -23,10 +23,10 @@ export class ModificarDocenteComponent implements OnInit {
     });
   }
 
-  actualizarAlumno(formGroup: FormGroup) {
+  actualizarDocente(formGroup: FormGroup) {
     const docente = new Docente(formGroup.value);
     this.docenteService.actualizarDocentes(docente).subscribe(resp => {
-      this.router.navigate(['/abm-docentes/abm-docentes/menu-docente']);
+      this.router.navigate(['/abm-docentes/menu-docente']);
     },
     err => {
       console.log(err);

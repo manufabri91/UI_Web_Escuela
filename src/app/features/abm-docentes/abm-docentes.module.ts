@@ -10,6 +10,11 @@ import { AbmDocenteRoutingModule } from './abm-docentes-routing.module';
 import { AltaDocenteComponent } from './alta-docente/alta-docente.component';
 import { FormDocenteComponent } from './form-docente/form-docente.component';
 import { ModificarDocenteComponent } from './modificar-docente/modificar-docente.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MAT_DATE_LOCALE, MatNativeDateModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 
@@ -23,7 +28,16 @@ import { ModificarDocenteComponent } from './modificar-docente/modificar-docente
     MatTableModule,
     MatIconModule,
     MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatSelectModule,
+    MatNativeDateModule,
     AbmDocenteRoutingModule
+  ],
+  providers: [
+    MatDatepickerModule,
+    {provide: MAT_DATE_LOCALE, useValue: 'es-AR'},
   ]
 })
 export class AbmDocentesModule { }

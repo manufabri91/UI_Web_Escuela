@@ -1,63 +1,53 @@
 <div class="container-fluid mt-3 gestion-docentes">
-    <div class="jumbotron">
-    <header class="titulo"><h2>GESTIÓN DE DOCENTES</h2></header>
+    <header class="titulo">
+        <h3>GESTIÓN DE DOCENTES</h3>
+    </header>
     <div class="agregarDocente">
         <button mat-fab color="primary" routerLink="/abm-docentes/alta-docente">
             <mat-icon>add</mat-icon>
         </button>
     </div>
-
-    <table mat-table [dataSource]="docente" class="mat-elevation-z8 tabla">
-
-        <!-- Position Column -->
-        <ng-container matColumnDef="legajo">
-            <th mat-header-cell *matHeaderCellDef> Legajo </th>
-            <td mat-cell *matCellDef="let docente"> {{docente.legajo}} </td>
-        </ng-container>
-
-        <!-- Name Column -->
-        <ng-container matColumnDef="nombre">
-            <th mat-header-cell *matHeaderCellDef> Nombre </th>
-            <td mat-cell *matCellDef="let docente"> {{docente.nombre}} </td>
-        </ng-container>
-
-        <!-- Weight Column -->
-        <ng-container matColumnDef="apellido">
-            <th mat-header-cell *matHeaderCellDef> Apellido </th>
-            <td mat-cell *matCellDef="let docente"> {{docente.apellido}} </td>
-        </ng-container>
-
-        <!-- Symbol Column -->
-        <ng-container matColumnDef="nacimiento">
-            <th mat-header-cell *matHeaderCellDef> Nacimiento </th>
-            <td mat-cell *matCellDef="let docente"> {{docente.nacimiento}} </td>
-        </ng-container>
-
-        <ng-container matColumnDef="dni">
-            <th mat-header-cell *matHeaderCellDef> Dni </th>
-            <td mat-cell *matCellDef="let docente"> {{docente.dni}} </td>
-        </ng-container>
-
-        <ng-container matColumnDef="telefono">
-            <th mat-header-cell *matHeaderCellDef> Teléfono </th>
-            <td mat-cell *matCellDef="let docente"> {{docente.telefono}} </td>
-        </ng-container>
-        <ng-container matColumnDef="modificar">
-            <th mat-header-cell *matHeaderCellDef> Modificar </th>
-            <td mat-cell *matCellDef="let docente">
-                <button mat-raised-button [routerLink]="['/abm-docentes/modificar-docente',docente.legajo]"
-                    color="primary">Modificar</button>
-            </td>
-        </ng-container>
-        <ng-container matColumnDef="eliminar">
-            <th mat-header-cell *matHeaderCellDef> Eliminar </th>
-            <td mat-cell *matCellDef="let docente">
-                <button mat-raised-button (click)="eliminarDocente(docente.legajo)" color="warn">Eliminar</button>
-            </td>
-        </ng-container>
-
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
-</div>
+    <div class="tabla-container mat-elevation-z8">
+        <table mat-table [dataSource]="docentes">
+            <ng-container matColumnDef="legajo">
+                <th mat-header-cell *matHeaderCellDef> Legajo </th>
+                <td mat-cell *matCellDef="let docente"> {{docente.legajo}} </td>
+            </ng-container>
+            <ng-container matColumnDef="nombre">
+                <th mat-header-cell *matHeaderCellDef> Nombre </th>
+                <td mat-cell *matCellDef="let docente"> {{docente.nombre}} </td>
+            </ng-container>
+            <ng-container matColumnDef="apellido">
+                <th mat-header-cell *matHeaderCellDef> Apellido </th>
+                <td mat-cell *matCellDef="let docente"> {{docente.apellido}} </td>
+            </ng-container>
+            <ng-container matColumnDef="nacimiento">
+                <th mat-header-cell *matHeaderCellDef> Nacimiento </th>
+                <td mat-cell *matCellDef="let docente"> {{docente.nacimiento}} </td>
+            </ng-container>
+            <ng-container matColumnDef="dni">
+                <th mat-header-cell *matHeaderCellDef> Dni </th>
+                <td mat-cell *matCellDef="let docente"> {{docente.dni}} </td>
+            </ng-container>
+            <ng-container matColumnDef="telefono">
+                <th mat-header-cell *matHeaderCellDef> Teléfono </th>
+                <td mat-cell *matCellDef="let docente"> {{docente.telefono}} </td>
+            </ng-container>
+            <ng-container matColumnDef="modificar">
+                <th mat-header-cell *matHeaderCellDef> Modificar </th>
+                <td mat-cell *matCellDef="let docente">
+                    <button mat-raised-button [routerLink]="['/abm-docentes/modificar-docente',docente.legajo]"
+                        color="primary">Modificar</button>
+                </td>
+            </ng-container>
+            <ng-container matColumnDef="eliminar">
+                <th mat-header-cell *matHeaderCellDef> Eliminar </th>
+                <td mat-cell *matCellDef="let docente">
+                    <button mat-raised-button (click)="eliminarDocente(docente.legajo)" color="warn">Eliminar</button>
+                </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
 </div>

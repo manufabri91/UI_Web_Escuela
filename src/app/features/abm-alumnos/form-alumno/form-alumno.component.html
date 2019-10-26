@@ -1,6 +1,6 @@
-<main class="container-fluid form-alumno">
+<main class="container-fluid">
     <form [formGroup]="alumnoForm" (ngSubmit)="onSubmit()">
-        <div class="jumbotron">
+        <div class="form-alumno">
             <mat-form-field *ngIf="this.legajoEdit">
                 <input matInput placeholder="Legajo" formControlName="legajo">
                 <mat-error>  

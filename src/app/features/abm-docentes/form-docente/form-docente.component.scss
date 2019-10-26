@@ -1,0 +1,16 @@
+@import "src/app/styles/colores";
+
+.form-docente {
+  display: flex;
+  flex-direction: column;
+  color: $indigo500;
+  background-color: $indigo50;
+  margin-top: 2%;
+  justify-content: center;
+  .botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 3%;
+  }
+}

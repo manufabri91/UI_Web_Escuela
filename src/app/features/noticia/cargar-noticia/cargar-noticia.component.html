@@ -1,30 +1,4 @@
-<main class="container-fluid cuerpo-noticias">
-    <div class="jumbotron">
-        <h1 align="center">Agregar noticia</h1>
-        
-        <mat-form-field hintLabel="Máximo 40 caracteres">
-            <input matInput #input maxlength="40" placeholder="Titulo" [(ngModel)]="noticia.titulo">
-            <mat-hint align="end">{{input.value?.length || 0}}/40</mat-hint>
-        </mat-form-field>
-
-        <mat-form-field>
-            <mat-select placeholder="Relevancia" [(ngModel)]="importante">
-                <mat-option value="I">Importante</mat-option>
-                <mat-option value="NI">No Importante</mat-option>
-            </mat-select>
-        </mat-form-field>
-
-        <mat-form-field hintLabel="Máximo 100 caracteres">
-            <input matInput #input maxlength="100" placeholder="Resumen de la noticia" [(ngModel)]="noticia.resumen">
-            <mat-hint align="end">{{input.value?.length || 0}}/100</mat-hint>
-        </mat-form-field>
-
-        <mat-form-field>
-            <textarea matInput placeholder="Cuerpo de la noticia" [(ngModel)]="noticia.cuerpo"></textarea>
-        </mat-form-field>
-
-        <button mat-raised-button color="primary" type="submit" align="center" (click)="cargarNoticia()">Guardar</button>
-
-    </div>
-
-</main>
+<div class="container-fluid cuerpo-container">
+    <h3 class="titulo">AGREGAR NOTICIA</h3>
+    <app-form-noticia (formSubmitted)="cargarNoticia($event)"></app-form-noticia>
+</div>

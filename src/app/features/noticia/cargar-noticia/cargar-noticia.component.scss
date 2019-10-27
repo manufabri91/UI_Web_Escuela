@@ -1,26 +1,14 @@
-@import "src/app/styles/colores";
-
-  .cuerpo-noticias {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 40%;
-    padding: 5%;
-    height: 80vh;    
-  }
-  
-  .jumbotron {
-    display: flex;
-    flex-direction: column;
+.cuerpo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  padding: 2%;
+  background-color: #E8EAF6;
+  box-shadow: 0 1px 5px 1px rgba(0,0,0,.2), 0 0px 0px 0 rgba(0,0,0,.14), 0 0px 0px 0 rgba(0,0,0,.12);
+  margin-top: 2%;
+  .titulo {
     color: #3950a2;
-    background-color: #E8EAF6;
-    box-shadow: 0 1px 5px 1px rgba(0,0,0,.2), 0 0px 0px 0 rgba(0,0,0,.14), 0 0px 0px 0 rgba(0,0,0,.12);
-    margin-top: 2%;
-    }
-
-  @media screen and (max-width: 1300px) {
-      .jumbotron {
-      justify-content: center;
-      min-width: 385px;
-      }
+    text-align: center;
   }
+}

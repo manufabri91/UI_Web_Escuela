@@ -1,11 +1,14 @@
 @import "src/app/styles/colores";
 
-.form-docente {
+.form-noticia {
   display: flex;
   flex-direction: column;
   background-color: $indigo50;
   margin-top: 2%;
   justify-content: center;
+  .mat-select-value {
+    color: $indigo500;
+  }
   .botones {
     display: flex;
     flex-direction: row;

@@ -4,9 +4,8 @@
   }
 
 .titular {
-    color: rgb(44, 60, 153);
+    color: $indigo700;
     margin-top: 2%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .noticia {
@@ -16,18 +15,15 @@
     align-items: center;
     &.importante {
         .titulo {
-            color: rgb(170, 11, 11);
+            color: $alerta;
         }
     }
 }
 
 .jumbotron1 {
     justify-content: center;
-    .typog {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      }
-    color: #E8EAF6;
-    background-color: #3950a2;
+    color: $indigo50;
+    background-color: $indigo500;
     box-shadow: 0 1px 5px 1px rgba(0,0,0,.2), 0 0px 0px 0 rgba(0,0,0,.14), 0 0px 0px 0 rgba(0,0,0,.12);
     margin-top: 2%;
     height: 80%;
@@ -35,7 +31,7 @@
 
 .jumbotron3 {
   color: $negrogris;
-  background-color: #e9ecef;
+  background-color: $indigobg;
   box-shadow: 0 1px 5px 1px rgba(0,0,0,.2), 0 0px 0px 0 rgba(0,0,0,.14), 0 0px 0px 0 rgba(0,0,0,.12);
   width: 80%;
   margin-top: 2%;
@@ -43,8 +39,7 @@
 
 .pdiseño {
     font-size: 18px;
-    color: #545555;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: $disenobg;
     justify-content: center;
 }
 

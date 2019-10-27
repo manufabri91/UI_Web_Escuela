@@ -4,14 +4,12 @@
   padding: 0 10%;
 }
 
+.view, .carousel, .carousel-inner{
+  max-height: 60vh;
+}
 .container-carousel {
-    display: flex;
-    justify-content: center;
-    box-shadow: 0 1px 5px 1px rgba(0,0,0,.2), 0 0px 0px 0 rgba(0,0,0,.14), 0 0px 0px 0 rgba(0,0,0,.12);
     margin-top: 2%;
   .fotos-escuela {
-    max-width: 150vh;
-    max-height: 60vh;
     overflow: hidden;
   }
 }
@@ -19,7 +17,7 @@
 .container-grid {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 2%;
   margin-bottom: 2%;
 }
@@ -28,7 +26,7 @@
   display: flex;
   flex-direction: column;
   max-width: 30%;
-  background-color: #e9ecef;
+  background-color: $indigobg;
   box-shadow: 0 1px 5px 1px rgba(0,0,0,.2), 0 0px 0px 0 rgba(0,0,0,.14), 0 0px 0px 0 rgba(0,0,0,.12);
 }
 
@@ -55,7 +53,7 @@
     align-items: center;
   }
   .example-card {
-    max-width: 90%;
+    max-width: 100%;
     margin-top: 5%;
     margin-bottom: 2%;
   }
@@ -63,8 +61,13 @@
 }
 
 .jumbotron {
-  color: #E8EAF6;
-  background-color: $indigo500;
+  color: $indigo50;
+  &.quienes-somos {
+    background-color: $indigo500;
+  }
+  &.novedades {
+    background-color: $negrogris;
+  }
   box-shadow: 0 1px 5px 1px rgba(0,0,0,.2), 0 0px 0px 0 rgba(0,0,0,.14), 0 0px 0px 0 rgba(0,0,0,.12);
 }
 
@@ -87,15 +90,4 @@
 .tamaño {
   width: 90%;
   height: 90px;
-}
-
-.jumbotron2 {
-  color: #212121;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #e9ecef;
-  box-shadow: 0 1px 5px 1px rgba(0,0,0,.2), 0 0px 0px 0 rgba(0,0,0,.14), 0 0px 0px 0 rgba(0,0,0,.12);
-}
-
-.typog {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

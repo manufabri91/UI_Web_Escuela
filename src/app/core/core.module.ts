@@ -8,6 +8,7 @@ import { AlumnoService } from './services/alumno/alumno.service';
 import { LoginService } from './services/login/login.service';
 import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CarouselModule, WavesModule } from 'angular-bootstrap-md';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -32,7 +33,9 @@ import { DocenteService } from './services/docente/docente.service';
     MatIconModule,
     MatTableModule,
     MatDividerModule,
-    MatTabsModule
+    MatTabsModule,
+    CarouselModule,
+    WavesModule
   ],
   exports: [ // componentes o modulos que se van a usar en otro lado
     NgbModule,

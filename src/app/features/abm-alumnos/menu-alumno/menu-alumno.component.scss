@@ -1,27 +1,24 @@
-.gestion-alumnos {
-  
-  height: 80vh;
-    
+@import "src/app/styles/colores";
+.gestion-alumnos {  
+  height: 80vh;    
   .titulo {
     display: flex;
     justify-content: center;
-    color: #3950a2;
-  }
-  
+    color: $indigo500;
+  }  
   .agregarAlumno {
     display: flex;
     justify-content: flex-end;
-    margin: 1% calc(5% - 20px);
-  }
-  
+    margin: calc(1% + 20px) 0;
+  }  
   .tabla-container {
     width: 100%;
     overflow: auto;
-  }
-  
+  }  
   table {
     min-width: 800px;
     width: 100%;
+    background-color: $indigo50;
   }
   
 }

@@ -1,24 +1,17 @@
 <main class="container-fluid">
   <div class="container-carousel">
-    <ngb-carousel *ngIf="images" [showNavigationArrows]="showNavigationArrows"
-      [showNavigationIndicators]="showNavigationIndicators">
-      <ng-template ngbSlide *ngFor="let image of images">
-        <div class="fotos-escuela">
-          <img class="foto" [src]="image.path" alt="Foto escuela">
-        </div>
-        <div class="carousel-caption">
-          <h3>{{image.titulo}}</h3>
-          <p>{{image.desc}}</p>
-        </div>
-      </ng-template>
-    </ngb-carousel>
+      <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
+        <mdb-carousel-item *ngFor="let image of images">
+          <img class="d-block w-100" [src]="image.path" alt="First slide">
+        </mdb-carousel-item>
+      </mdb-carousel>
   </div>
 
   <div class="container-grid">
     <mat-card class="example-card">
       <mat-card-header>
         <img mat-card-avatar class="foto" src="/assets/img/ds.png" alt="DS">
-        <mat-card-title>Desarrollo de Software.</mat-card-title>
+        <mat-card-title>Desarrollo de Software</mat-card-title>
       </mat-card-header>
       <img mat-card-image src="/assets/img/ds.png" alt="DS">
       <mat-card-content>
@@ -36,7 +29,7 @@
     <mat-card class="example-card">
       <mat-card-header>
         <img mat-card-avatar class="foto" src="/assets/img/af.png" alt="AF">
-        <mat-card-title>Analísta Funcional.</mat-card-title>
+        <mat-card-title>Analísta Funcional</mat-card-title>
       </mat-card-header>
       <img mat-card-image src="/assets/img/af.png" alt="Photo of a Shiba Inu">
       <mat-card-content>
@@ -52,7 +45,7 @@
     <mat-card class="example-card">
       <mat-card-header>
         <img mat-card-avatar class="foto" src="/assets/img/it.png" alt="IT">
-        <mat-card-title>Infraestructura Tecnológica.</mat-card-title>
+        <mat-card-title>Infraestructura Tecnológica</mat-card-title>
       </mat-card-header>
       <img mat-card-image src="/assets/img/it.png" alt="IT">
       <mat-card-content>
@@ -66,9 +59,9 @@
     </mat-card>
   </div>
 
-  <div class="jumbotron">
-    <h1 class="display-4" align="center">Terciario Carlos S. Méndez</h1>
-    <p class="lead" align="center">Quienes somos.</p>
+  <div class="jumbotron quienes-somos">
+    <h1 class="display-4 text-center" >Terciario Carlos S. Méndez</h1>
+    <p class="lead text-center text-black" >Quienes somos</p>
     <hr class="my-4">
     <p class="typog">
       Somos un instituto de nivel terciario creado el 1 de mayo de 1999 por Disposición del presidente de turno, para la
@@ -82,9 +75,9 @@
       actualizó las carreras a la denominación y alcance actual.</p>
   </div>
 
-  <div class="jumbotron jumbotron2 text-black">
-    <h1 class="display-4 text-black" align="center">Newsletter</h1>
-    <p class="lead text-black" align="center">Novedades relevantes para la comunidad educativa</p>
+  <div class="jumbotron novedades">
+    <h1 class="display-4 text-center">Terciario Carlos S. Méndez</h1>
+    <p class="lead text-center text-black">Novedades relevantes para la comunidad educativa</p>
     <hr class="my-3">
     <div class="row">
       <div *ngFor="let noticia of titulares" class="col noticia">

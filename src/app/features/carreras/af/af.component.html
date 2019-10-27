@@ -2,125 +2,127 @@
     <div class="jumbotron">
         <h1 class="display-4" align="center">Análisis Funcional</h1>
     </div>
-
-    <mat-tab-group dynamicHeight>
-        <mat-tab label="Sus funciones">
-            <br />
-            <p>El Técnico Superior en Análisis Funcional de Sistemas Informáticos estará capacitado para comprender e
-                interpretar fines, negocios o actividades de una organización, analizar los procesos que se llevan a
-                cabo,
-                averiguar las necesidades de información, proponer mejoras, especificar requisitos de software, redactar
-                manuales y procedimientos, y apoyar la puesta en marcha de sistemas, actuando de nexo entre usuarios de
-                la
-                organización y el grupo de proyecto, desarrollando las actividades descriptas en el perfil profesional y
-                cumpliendo con los criterios de realización establecidos para las mismas
-            </p>
-            <strong>Las funciones del Técnico Superior en Análisis Funcional de Sistemas Informáticos son:</strong>
-            <ul>
-                <li>Relevar necesidades de información de los usuarios para establecer los requerimientos del sistema
-                </li>
-                <li>Interpretar el proceso de negocio o actividad objeto del sistema para comprenderlo y desarrollar
-                    modelos que
-                    representen la realidad de la organización y su operatoria</li>
-                <li>Definir el alcance funcional del proceso o sistema, tomando en cuenta las prioridades establecidas y
-                    estimar su tamaño para establecer una línea de base para el proyecto</li>
-                <li>Analizar el problema objeto del proyecto para especificar los requisitos de software</li>
-                <li>Validar los requisitos especificados para asegurarse que representan las necesidades de las partes
-                    interesadas</li>
-                <li>Transferir los requisitos de software al resto del equipo para facilitar su comprensión e
-                    implementación en
-                    artefactos de software</li>
-                <li>Verificar la funcionalidad del software para asegurarse que satisface los requisitos planteados
-                </li>
-                <li>Generar el soporte documental para el usuario</li>
-                <li>Implantar el sistema o procedimiento en la organización</li>
-                <li>Administrar los requerimientos y las solicitudes de cambio de los requisitos de software</li>
-                <li>Generar propuestas innovadoras y/o emprendimientos productivos propios del ámbito del análisis
-                    funcional de
-                    sistemas informáticos</li>
-            </ul>
-        </mat-tab>
-        <mat-tab label="Primer Año">
-            <div class="example-large-box mat-elevation-z4">
-                <mat-table [dataSource]="dataMateria1" class="mat-elevation-z8">
-                    <!-- Nombre Column -->
-                    <ng-container matColumnDef="nombre">
-                        <mat-header-cell *matHeaderCellDef> Unidad Curricular </mat-header-cell>
-                        <mat-cell *matCellDef="let element"> {{element.nombre}} </mat-cell>
-                    </ng-container>
-
-                    <!-- Regimen Column -->
-                    <ng-container matColumnDef="regimen">
-                        <mat-header-cell *matHeaderCellDef> Régimen </mat-header-cell>
-                        <mat-cell *matCellDef="let element"> {{element.regimen}} </mat-cell>
-                    </ng-container>
-
-                    <!-- Horas Column -->
-                    <ng-container matColumnDef="hs">
-                        <mat-header-cell *matHeaderCellDef> HS </mat-header-cell>
-                        <mat-cell *matCellDef="let element"> {{element.hs}} </mat-cell>
-                    </ng-container>
-
-                    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-                    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-                </mat-table>
-            </div>
-        </mat-tab>
-        <mat-tab label="Segundo Año">
-            <div class="example-large-box mat-elevation-z4">
+    <div class="">
+        <mat-tab-group dynamicHeight>
+            <mat-tab label="Sus funciones">
+                <br />
+                <p>El Técnico Superior en Análisis Funcional de Sistemas Informáticos estará capacitado para comprender e
+                    interpretar fines, negocios o actividades de una organización, analizar los procesos que se llevan a
+                    cabo,
+                    averiguar las necesidades de información, proponer mejoras, especificar requisitos de software, redactar
+                    manuales y procedimientos, y apoyar la puesta en marcha de sistemas, actuando de nexo entre usuarios de
+                    la
+                    organización y el grupo de proyecto, desarrollando las actividades descriptas en el perfil profesional y
+                    cumpliendo con los criterios de realización establecidos para las mismas
+                </p>
+                <strong>Las funciones del Técnico Superior en Análisis Funcional de Sistemas Informáticos son:</strong>
+                <ul>
+                    <li>Relevar necesidades de información de los usuarios para establecer los requerimientos del sistema
+                    </li>
+                    <li>Interpretar el proceso de negocio o actividad objeto del sistema para comprenderlo y desarrollar
+                        modelos que
+                        representen la realidad de la organización y su operatoria</li>
+                    <li>Definir el alcance funcional del proceso o sistema, tomando en cuenta las prioridades establecidas y
+                        estimar su tamaño para establecer una línea de base para el proyecto</li>
+                    <li>Analizar el problema objeto del proyecto para especificar los requisitos de software</li>
+                    <li>Validar los requisitos especificados para asegurarse que representan las necesidades de las partes
+                        interesadas</li>
+                    <li>Transferir los requisitos de software al resto del equipo para facilitar su comprensión e
+                        implementación en
+                        artefactos de software</li>
+                    <li>Verificar la funcionalidad del software para asegurarse que satisface los requisitos planteados
+                    </li>
+                    <li>Generar el soporte documental para el usuario</li>
+                    <li>Implantar el sistema o procedimiento en la organización</li>
+                    <li>Administrar los requerimientos y las solicitudes de cambio de los requisitos de software</li>
+                    <li>Generar propuestas innovadoras y/o emprendimientos productivos propios del ámbito del análisis
+                        funcional de
+                        sistemas informáticos</li>
+                </ul>
+            </mat-tab>
+            <mat-tab label="Primer Año">
                 <div class="example-large-box mat-elevation-z4">
-                    <mat-table [dataSource]="dataMateria2" class="mat-elevation-z8">
+                    <mat-table [dataSource]="dataMateria1" class="mat-elevation-z8">
                         <!-- Nombre Column -->
                         <ng-container matColumnDef="nombre">
                             <mat-header-cell *matHeaderCellDef> Unidad Curricular </mat-header-cell>
                             <mat-cell *matCellDef="let element"> {{element.nombre}} </mat-cell>
                         </ng-container>
-
+    
                         <!-- Regimen Column -->
                         <ng-container matColumnDef="regimen">
                             <mat-header-cell *matHeaderCellDef> Régimen </mat-header-cell>
                             <mat-cell *matCellDef="let element"> {{element.regimen}} </mat-cell>
                         </ng-container>
-
+    
                         <!-- Horas Column -->
                         <ng-container matColumnDef="hs">
                             <mat-header-cell *matHeaderCellDef> HS </mat-header-cell>
                             <mat-cell *matCellDef="let element"> {{element.hs}} </mat-cell>
                         </ng-container>
-
+    
                         <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                         <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
                     </mat-table>
                 </div>
-            </div>
-        </mat-tab>
-        <mat-tab label="Tercer Año">
-            <div class="example-large-box mat-elevation-z4">
+            </mat-tab>
+            <mat-tab label="Segundo Año">
                 <div class="example-large-box mat-elevation-z4">
-                    <mat-table [dataSource]="dataMateria3" class="mat-elevation-z8">
-                        <!-- Nombre Column -->
-                        <ng-container matColumnDef="nombre">
-                            <mat-header-cell *matHeaderCellDef> Unidad Curricular </mat-header-cell>
-                            <mat-cell *matCellDef="let element"> {{element.nombre}} </mat-cell>
-                        </ng-container>
-
-                        <!-- Regimen Column -->
-                        <ng-container matColumnDef="regimen">
-                            <mat-header-cell *matHeaderCellDef> Régimen </mat-header-cell>
-                            <mat-cell *matCellDef="let element"> {{element.regimen}} </mat-cell>
-                        </ng-container>
-
-                        <!-- Horas Column -->
-                        <ng-container matColumnDef="hs">
-                            <mat-header-cell *matHeaderCellDef> HS </mat-header-cell>
-                            <mat-cell *matCellDef="let element"> {{element.hs}} </mat-cell>
-                        </ng-container>
-
-                        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-                        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-                    </mat-table>
+                    <div class="example-large-box mat-elevation-z4">
+                        <mat-table [dataSource]="dataMateria2" class="mat-elevation-z8">
+                            <!-- Nombre Column -->
+                            <ng-container matColumnDef="nombre">
+                                <mat-header-cell *matHeaderCellDef> Unidad Curricular </mat-header-cell>
+                                <mat-cell *matCellDef="let element"> {{element.nombre}} </mat-cell>
+                            </ng-container>
+    
+                            <!-- Regimen Column -->
+                            <ng-container matColumnDef="regimen">
+                                <mat-header-cell *matHeaderCellDef> Régimen </mat-header-cell>
+                                <mat-cell *matCellDef="let element"> {{element.regimen}} </mat-cell>
+                            </ng-container>
+    
+                            <!-- Horas Column -->
+                            <ng-container matColumnDef="hs">
+                                <mat-header-cell *matHeaderCellDef> HS </mat-header-cell>
+                                <mat-cell *matCellDef="let element"> {{element.hs}} </mat-cell>
+                            </ng-container>
+    
+                            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                        </mat-table>
+                    </div>
                 </div>
-            </div>
-        </mat-tab>
-    </mat-tab-group>
+            </mat-tab>
+            <mat-tab label="Tercer Año">
+                <div class="example-large-box mat-elevation-z4">
+                    <div class="example-large-box mat-elevation-z4">
+                        <mat-table [dataSource]="dataMateria3" class="mat-elevation-z8">
+                            <!-- Nombre Column -->
+                            <ng-container matColumnDef="nombre">
+                                <mat-header-cell *matHeaderCellDef> Unidad Curricular </mat-header-cell>
+                                <mat-cell *matCellDef="let element"> {{element.nombre}} </mat-cell>
+                            </ng-container>
+    
+                            <!-- Regimen Column -->
+                            <ng-container matColumnDef="regimen">
+                                <mat-header-cell *matHeaderCellDef> Régimen </mat-header-cell>
+                                <mat-cell *matCellDef="let element"> {{element.regimen}} </mat-cell>
+                            </ng-container>
+    
+                            <!-- Horas Column -->
+                            <ng-container matColumnDef="hs">
+                                <mat-header-cell *matHeaderCellDef> HS </mat-header-cell>
+                                <mat-cell *matCellDef="let element"> {{element.hs}} </mat-cell>
+                            </ng-container>
+    
+                            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                        </mat-table>
+                    </div>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+    
 </main>

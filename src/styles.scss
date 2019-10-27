@@ -1,10 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
 @import 'src/app/styles/colores';
 
 html, body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: $negrogris;
     background: $indigobg;
 }
@@ -18,10 +19,11 @@ html, body {
 .mat-tab-group,
 .mat-tab-label,
 .mat-table  {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: $negrogris;
 }
 .dropdown-menu {
     background-color: $indigobg; 
 }
+
 

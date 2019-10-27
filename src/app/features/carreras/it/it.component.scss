@@ -1,7 +1,7 @@
 @import "src/app/styles/colores";
 
 .container-fluid {
-  padding: 0 10%;
+  padding: 0 5%;
 }
 .container-grid {
   display: flex;
@@ -22,17 +22,9 @@
   box-shadow: 0 1px 5px 1px rgba(0,0,0,.2), 0 0px 0px 0 rgba(0,0,0,.14), 0 0px 0px 0 rgba(0,0,0,.12);
   margin-top: 2%;
 }
-// .mat-tab-groups {
-//   display: flex;
-//   justify-content: center;
-//   margin-bottom: 50%;
-// }
 .mat-elevation-z8 {
   width: 100%;
 }
 table {
-    width: 100%;
-  }
-.typog {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
 }

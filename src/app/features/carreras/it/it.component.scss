@@ -3,6 +3,7 @@
 .container-fluid {
   padding: 0 5%;
 }
+
 .container-grid {
   display: flex;
   flex-direction: row;
@@ -10,21 +11,50 @@
   margin-top: 2%;
   margin-bottom: 2%;
 }
+
+.jumbotron {
+  color: $indigo50;
+  background-color: $naranjait;
+  box-shadow: 0 1px 5px 1px rgba(0,0,0,.2), 0 0px 0px 0 rgba(0,0,0,.14), 0 0px 0px 0 rgba(0,0,0,.12);
+  margin: 2% 0;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-elevation-z8 {
+  width: 100%;
+}
+
 @media screen and (max-width: 1000px) {
   .container-grid {
     flex-direction: column;
     align-items: center;
   }
 }
-.jumbotron {
-  color: $indigo50;
-  background-color: $naranjait;
-  box-shadow: 0 1px 5px 1px rgba(0,0,0,.2), 0 0px 0px 0 rgba(0,0,0,.14), 0 0px 0px 0 rgba(0,0,0,.12);
-  margin-top: 2%;
+
+@mixin mat-table-columns($columns)
+{
+    .mat-column-
+    {
+        @each $colName, $props in $columns {
+
+            $width: map-get($props, 'width');
+
+            &#{$colName} 
+            {
+                flex: $width;
+                min-width: $width;
+
+                @if map-has-key($props, 'color') 
+                {
+                    color: map-get($props, 'color');
+                }
+            }  
+        }
+    }
 }
-.mat-elevation-z8 {
-  width: 100%;
-}
-table {
-  width: 100%;
-}
+@include mat-table-columns((
+    nombre: (width: 8rem)
+));

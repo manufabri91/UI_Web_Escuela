@@ -8,6 +8,7 @@ import { LoginService } from 'src/app/core/services/login/login.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  ocultar = true;
   email = '';
   password = '';
 

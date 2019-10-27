@@ -1,11 +1,18 @@
 @import "src/app/styles/colores";
 .container-fluid {
-    padding: 0 10%;
-  }
+  padding: 0 10%;
+}
+
+.jumbotron {
+  color: $indigo50;
+  background-color: $indigo500;
+  box-shadow: 0 1px 5px 1px rgba(0,0,0,.2), 0 0px 0px 0 rgba(0,0,0,.14), 0 0px 0px 0 rgba(0,0,0,.12);
+  margin: 2% 0;
+}
 
 .titular {
     color: $indigo700;
-    margin-top: 2%;
+    margin-top: 3%;
 }
 
 .noticia {
@@ -13,33 +20,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: $negrogris;
+    background-color: $indigobg;
+    box-shadow: 0 1px 5px 1px rgba(0,0,0,.2), 0 0px 0px 0 rgba(0,0,0,.14), 0 0px 0px 0 rgba(0,0,0,.12);
+    border-radius: 3px;
+    width: 100%;
+    margin-top: 2%;
+    padding: 3%;
     &.importante {
         .titulo {
             color: $alerta;
         }
     }
-}
-
-.jumbotron1 {
-    justify-content: center;
-    color: $indigo50;
-    background-color: $indigo500;
-    box-shadow: 0 1px 5px 1px rgba(0,0,0,.2), 0 0px 0px 0 rgba(0,0,0,.14), 0 0px 0px 0 rgba(0,0,0,.12);
-    margin-top: 2%;
-    height: 80%;
+    .cuerpo {
+      color: $disenobg;
+      justify-content: center;
   }
-
-.jumbotron3 {
-  color: $negrogris;
-  background-color: $indigobg;
-  box-shadow: 0 1px 5px 1px rgba(0,0,0,.2), 0 0px 0px 0 rgba(0,0,0,.14), 0 0px 0px 0 rgba(0,0,0,.12);
-  width: 80%;
-  margin-top: 2%;
 }
 
-.pdiseño {
-    font-size: 18px;
-    color: $disenobg;
-    justify-content: center;
-}
+
 

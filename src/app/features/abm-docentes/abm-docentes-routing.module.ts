@@ -8,11 +8,13 @@ import { ModificarDocenteComponent } from './modificar-docente/modificar-docente
 const routes: Routes = [
   {
     path: 'menu-docente',
-    component: MenuDocenteComponent
+    component: MenuDocenteComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'modificar-docente/:legajo',
-    component: ModificarDocenteComponent
+    component: ModificarDocenteComponent,
+    canActivate: [AuthGuard]
   },
    {
     path: 'alta-docente',

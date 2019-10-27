@@ -1,17 +1,15 @@
-.gestion-noticia {
-  
+@import "src/app/styles/colores";
+.gestion-noticias {
   height: 80vh;
-    
   .titulo {
     display: flex;
     justify-content: center;
-    color: #3950a2;
+    color: $indigo500;
   }
-  
-  .agregarAlumno {
+  .agregarNoticia {
     display: flex;
     justify-content: flex-end;
-    margin: 1% calc(5% - 20px);
+    margin: calc(1% + 20px) 0;
   }
   
   .tabla-container {
@@ -22,6 +20,7 @@
   table {
     min-width: 1500px;
     width: 100%;
+    background-color: $indigo50;
   }
   
 }

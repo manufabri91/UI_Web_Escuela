@@ -9,18 +9,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./cargar-noticia.component.scss']
 })
 export class CargarNoticiaComponent implements OnInit {
-  noticia: Noticia;
-  importante: string;
 
   constructor(private noticiaService: NoticiaService, private router: Router) { }
 
   ngOnInit() {
-    this.noticia = new Noticia();
   }
 
-  cargarNoticia() {
-    this.noticia.importante = this.importante === 'I' ? true : false;
-    this.noticiaService.cargarNoticias(this.noticia).subscribe(result => {
+  cargarNoticia(noticia: Noticia) {
+    this.noticiaService.cargarNoticias(noticia).subscribe(result => {
       this.router.navigate(['/noticias/menu-noticias']);
     },
     error => {

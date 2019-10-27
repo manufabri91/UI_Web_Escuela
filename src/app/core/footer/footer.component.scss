@@ -2,13 +2,21 @@
 
 .page-footer {
     background-color: $indigo500;
-    color: #E8EAF6;
+    color: $indigo50;
     box-shadow: 0 1px 5px 1px rgba(0,0,0,.2), 0 0px 0px 0 rgba(0,0,0,.14), 0 0px 0px 0 rgba(0,0,0,.12);
     margin-top: 2%;
 }
-
+a {
+    color: $indigo50;
+    &:hover {
+        color: $negrogris;
+    }
+}
 .footer-copyright {
     background-color: $negrogris;
+    a:hover {
+        color: $indigo500;
+    }
 }
 
 

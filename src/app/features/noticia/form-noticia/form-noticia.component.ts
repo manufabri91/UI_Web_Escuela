@@ -29,7 +29,8 @@ export class FormNoticiaComponent implements OnInit {
         Validators.maxLength(40)
       ]),
       cuerpo: new FormControl('', [
-        Validators.required
+        Validators.required,
+        Validators.maxLength(255)
       ]),
       resumen: new FormControl('', [
         Validators.required,

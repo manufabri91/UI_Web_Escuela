@@ -10,7 +10,7 @@
             </mat-form-field>
 
             <mat-form-field>
-                <input matInput #input placeholder="Titulo" formControlName="titulo">
+                <input matInput #input placeholder="Titulo" formControlName="titulo" maxlength="40">
                 <mat-error>
                     <span *ngIf="titulo?.invalid && (titulo?.dirty || titulo?.touched)">El título es requerido y no debe exceder los 40 caracteres</span>
                 </mat-error>
@@ -27,16 +27,16 @@
             </mat-form-field>
     
             <mat-form-field>
-                <input matInput #input placeholder="Resumen de la noticia" formControlName="resumen">
+                <input matInput #input placeholder="Resumen de la noticia" formControlName="resumen" maxlength="100">
                 <mat-error>
                     <span *ngIf="resumen?.invalid && (resumen?.dirty || resumen?.touched)">El resumen es requerido y no debera exceder los 100 caracteres</span>
                 </mat-error>
             </mat-form-field>
     
             <mat-form-field>
-                <textarea rows="10" matInput placeholder="Cuerpo de la noticia" formControlName="cuerpo"></textarea>
+                <textarea rows="3" matInput placeholder="Cuerpo de la noticia" formControlName="cuerpo" maxlength="255"></textarea>
                 <mat-error>
-                    <span *ngIf="cuerpo?.invalid && (cuerpo?.dirty || cuerpo?.touched)">El cuerpo es requerido</span>
+                    <span *ngIf="cuerpo?.invalid && (cuerpo?.dirty || cuerpo?.touched)">El cuerpo es requerido y no debera exceder los 255 caracteres</span>
                 </mat-error>
             </mat-form-field>
             <div class="botones">
